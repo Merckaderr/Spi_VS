@@ -149,7 +149,7 @@ float current;
 uint16_t g_counter = 0;
 int g_delay = 300;
 
-uint8_t data[7]; //= "Hello\r\n";
+// uint8_t data[7]; //= "Hello\r\n";
 char data2[40];
 
 /* USER CODE END 0 */
@@ -193,7 +193,7 @@ int main(void)
 	//configWord = 0x4927;  128 avg
 	configWord = 0x4527;// 16 avg
 	I2C_Data[0] = 0x00;
-	I2C_Data[1]= (configWord & 0xFF00) >> 8;
+	I2C_Data[1] = (configWord & 0xFF00) >> 8;
 	I2C_Data[2] = (configWord & 0x00FF);
 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 20);
 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
@@ -201,7 +201,7 @@ int main(void)
 	// 2. Set Calibration register
 	calibWord = 0x800;
 	I2C_Data[0] = 0x05;
-	I2C_Data[1]= (calibWord & 0xFF00) >> 8;
+	I2C_Data[1] = (calibWord & 0xFF00) >> 8;
 	I2C_Data[2] = (calibWord & 0x00FF);
 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 10);
 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
@@ -540,7 +540,8 @@ void PrintTransmitMeasuredVC(int delay)
   voltage = GetVoltage(GetBusVoltageReg())/1000;
   current = GetCurrent(GetCurrentReg());
   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine, g_counter);
-  HAL_UART_Transmit(&huart2, data2, sizeof data2, 100+delay);
+  HAL_UART_Transmit(&huart2, data2, sizeof data2, 100);
+  HAL_Delay(delay);
 }
 
 /**
@@ -551,9 +552,10 @@ void PrintTransmitMeasuredVC(int delay)
 void PrintTransmitApproximatedVC(int delay)
 {
   voltage = GetVoltage(GetBusVoltageReg())/1000;
-  current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
+  current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine, g_counter);
-  HAL_UART_Transmit(&huart2, data2, sizeof data2, 100+delay);
+  HAL_UART_Transmit(&huart2, data2, sizeof data2, 100);
+  HAL_Delay(delay);
 }
 
 uint16_t GetShuntVoltageReg(void){	
