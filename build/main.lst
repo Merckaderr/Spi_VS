@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
   29:Src/main.c    ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
   30:Src/main.c    ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
   31:Src/main.c    ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 2
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 2
 
 
   32:Src/main.c    ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
   86:Src/main.c    **** /* USER CODE END PV */
   87:Src/main.c    **** 
   88:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 3
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 3
 
 
   89:Src/main.c    **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  143:Src/main.c    **** uint16_t receive;
  144:Src/main.c    **** // uint16_t volHex;
  145:Src/main.c    **** uint8_t sendOK;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 4
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 4
 
 
  146:Src/main.c    **** float voltage;
@@ -187,7 +187,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  149:Src/main.c    **** uint16_t g_counter = 0;
  150:Src/main.c    **** int g_delay = 300;
  151:Src/main.c    **** 
- 152:Src/main.c    **** uint8_t data[7]; //= "Hello\r\n";
+ 152:Src/main.c    **** // uint8_t data[7]; //= "Hello\r\n";
  153:Src/main.c    **** char data2[40];
  154:Src/main.c    **** 
  155:Src/main.c    **** /* USER CODE END 0 */
@@ -231,18 +231,18 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  193:Src/main.c    **** 	//configWord = 0x4927;  128 avg
  194:Src/main.c    **** 	configWord = 0x4527;// 16 avg
  195:Src/main.c    **** 	I2C_Data[0] = 0x00;
- 196:Src/main.c    **** 	I2C_Data[1]= (configWord & 0xFF00) >> 8;
+ 196:Src/main.c    **** 	I2C_Data[1] = (configWord & 0xFF00) >> 8;
  197:Src/main.c    **** 	I2C_Data[2] = (configWord & 0x00FF);
  198:Src/main.c    **** 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 20);
  199:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
  200:Src/main.c    **** 	
  201:Src/main.c    **** 	// 2. Set Calibration register
  202:Src/main.c    **** 	calibWord = 0x800;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 5
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 5
 
 
  203:Src/main.c    **** 	I2C_Data[0] = 0x05;
- 204:Src/main.c    **** 	I2C_Data[1]= (calibWord & 0xFF00) >> 8;
+ 204:Src/main.c    **** 	I2C_Data[1] = (calibWord & 0xFF00) >> 8;
  205:Src/main.c    **** 	I2C_Data[2] = (calibWord & 0x00FF);
  206:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 10);
  207:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  257:Src/main.c    ****   SetDACOut(outCoarse, CHANNEL_C);
  258:Src/main.c    **** 	SetDACOut(0, CHANNEL_D);
  259:Src/main.c    **** 
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 6
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 6
 
 
  260:Src/main.c    ****   /* USER CODE END 2 */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  314:Src/main.c    ****       PrintTransmitMeasuredVC(g_delay);
  315:Src/main.c    ****       g_counter++;
  316:Src/main.c    ****     }
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 7
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 7
 
 
  317:Src/main.c    ****     */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  371:Src/main.c    ****   */
  372:Src/main.c    **** static void MX_I2C1_Init(void)
  373:Src/main.c    **** {
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 8
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 8
 
 
  374:Src/main.c    **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  428:Src/main.c    ****   hspi1.Init.CRCPolynomial = 10;
  429:Src/main.c    ****   if (HAL_SPI_Init(&hspi1) != HAL_OK)
  430:Src/main.c    ****   {
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 9
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 9
 
 
  431:Src/main.c    ****     Error_Handler();
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
   34              		.cfi_def_cfa_offset 20
   35              		.cfi_offset 4, -20
   36              		.cfi_offset 5, -16
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 10
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 10
 
 
   37              		.cfi_offset 6, -12
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
   85              	.LBB4:
   86              		.loc 1 484 3 view .LVU16
   87 003a 0394     		str	r4, [sp, #12]
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 11
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 11
 
 
   88              		.loc 1 484 3 view .LVU17
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  132 007c 4FF40053 		mov	r3, #8192
  133 0080 0593     		str	r3, [sp, #20]
  495:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 12
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 12
 
 
  134              		.loc 1 495 3 is_stmt 1 view .LVU31
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  174 00ac 0794     		str	r4, [sp, #28]
  510:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
  175              		.loc 1 510 3 is_stmt 1 view .LVU51
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 13
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 13
 
 
  176              		.loc 1 510 25 is_stmt 0 view .LVU52
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  224 000c 4360     		str	r3, [r0, #4]
  456:Src/main.c    ****   huart2.Init.StopBits = UART_STOPBITS_1;
  225              		.loc 1 456 3 is_stmt 1 view .LVU60
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 14
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 14
 
 
  456:Src/main.c    ****   huart2.Init.StopBits = UART_STOPBITS_1;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  267              	.LFB128:
  373:Src/main.c    **** 
  268              		.loc 1 373 1 is_stmt 1 view -0
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 15
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 15
 
 
  269              		.cfi_startproc
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  306              		.loc 1 390 3 is_stmt 1 view .LVU93
  390:Src/main.c    ****   if (HAL_I2C_Init(&hi2c1) != HAL_OK)
  307              		.loc 1 390 28 is_stmt 0 view .LVU94
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 16
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 16
 
 
  308 001e 0362     		str	r3, [r0, #32]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  353 000e 0023     		movs	r3, #0
  354 0010 8360     		str	r3, [r0, #8]
  420:Src/main.c    ****   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 17
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 17
 
 
  355              		.loc 1 420 3 is_stmt 1 view .LVU106
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  389              		.loc 1 431 5 is_stmt 1 view .LVU126
  437:Src/main.c    **** 
  390              		.loc 1 437 1 is_stmt 0 view .LVU127
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 18
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 18
 
 
  391 0030 08BD     		pop	{r3, pc}
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  440 001a 0194     		str	r4, [sp, #4]
  335:Src/main.c    ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
  441              		.loc 1 335 3 view .LVU135
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 19
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 19
 
 
  442 001c 1B4B     		ldr	r3, .L19
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  481              		.loc 1 341 41 is_stmt 0 view .LVU150
  482 0052 1023     		movs	r3, #16
  483 0054 0C93     		str	r3, [sp, #48]
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 20
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 20
 
 
  342:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  518              		.loc 1 357 3 is_stmt 1 view .LVU170
  357:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
  519              		.loc 1 357 35 is_stmt 0 view .LVU171
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 21
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 21
 
 
  520 0076 0594     		str	r4, [sp, #20]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  563              		.loc 1 518 1 is_stmt 0 view .LVU181
  564 0000 10B5     		push	{r4, lr}
  565              	.LCFI9:
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 22
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 22
 
 
  566              		.cfi_def_cfa_offset 8
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  608 0028 8021     		movs	r1, #128
  609              	.LVL13:
  610              		.loc 1 528 4 is_stmt 0 view .LVU199
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 23
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 23
 
 
  611 002a 2046     		mov	r0, r4
@@ -1378,28 +1378,30 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  539:Src/main.c    **** {
  540:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
  541:Src/main.c    ****   current = GetCurrent(GetCurrentReg());
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 24
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 24
 
 
  542:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 543:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100+delay);
- 544:Src/main.c    **** }
- 545:Src/main.c    **** 
- 546:Src/main.c    **** /**
- 547:Src/main.c    ****   * @brief  Calculates Approximate values of Voltage and Current then Prints and Transmits them. 
- 548:Src/main.c    ****   * @param  delay - optional delay after transmitting data in ms.
- 549:Src/main.c    ****   * @retval None
- 550:Src/main.c    ****   */
- 551:Src/main.c    **** void PrintTransmitApproximatedVC(int delay)
- 552:Src/main.c    **** {
- 553:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
- 554:Src/main.c    ****   current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
- 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 556:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100+delay);
- 557:Src/main.c    **** }
- 558:Src/main.c    **** 
- 559:Src/main.c    **** uint16_t GetShuntVoltageReg(void){	
- 655              		.loc 1 559 34 is_stmt 1 view -0
+ 543:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100);
+ 544:Src/main.c    ****   HAL_Delay(delay);
+ 545:Src/main.c    **** }
+ 546:Src/main.c    **** 
+ 547:Src/main.c    **** /**
+ 548:Src/main.c    ****   * @brief  Calculates Approximate values of Voltage and Current then Prints and Transmits them. 
+ 549:Src/main.c    ****   * @param  delay - optional delay after transmitting data in ms.
+ 550:Src/main.c    ****   * @retval None
+ 551:Src/main.c    ****   */
+ 552:Src/main.c    **** void PrintTransmitApproximatedVC(int delay)
+ 553:Src/main.c    **** {
+ 554:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
+ 555:Src/main.c    ****   current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
+ 556:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 557:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100);
+ 558:Src/main.c    ****   HAL_Delay(delay);
+ 559:Src/main.c    **** }
+ 560:Src/main.c    **** 
+ 561:Src/main.c    **** uint16_t GetShuntVoltageReg(void){	
+ 655              		.loc 1 561 34 is_stmt 1 view -0
  656              		.cfi_startproc
  657              		@ args = 0, pretend = 0, frame = 0
  658              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1414,15 +1416,15 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  667 0002 83B0     		sub	sp, sp, #12
  668              	.LCFI11:
  669              		.cfi_def_cfa_offset 32
- 560:Src/main.c    **** 	I2C_Data[0] = 0x01;
- 670              		.loc 1 560 2 view .LVU206
- 671              		.loc 1 560 14 is_stmt 0 view .LVU207
+ 562:Src/main.c    **** 	I2C_Data[0] = 0x01;
+ 670              		.loc 1 562 2 view .LVU206
+ 671              		.loc 1 562 14 is_stmt 0 view .LVU207
  672 0004 0F4A     		ldr	r2, .L32
  673 0006 0123     		movs	r3, #1
  674 0008 1370     		strb	r3, [r2]
- 561:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 1, 10);
- 675              		.loc 1 561 2 is_stmt 1 view .LVU208
- 676              		.loc 1 561 12 is_stmt 0 view .LVU209
+ 563:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 1, 10);
+ 675              		.loc 1 563 2 is_stmt 1 view .LVU208
+ 676              		.loc 1 563 12 is_stmt 0 view .LVU209
  677 000a 0F4E     		ldr	r6, .L32+4
  678 000c 0F4D     		ldr	r5, .L32+8
  679 000e 0A27     		movs	r7, #10
@@ -1431,16 +1433,16 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  682 0014 2846     		mov	r0, r5
  683 0016 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
  684              	.LVL18:
- 685              		.loc 1 561 9 discriminator 1 view .LVU210
+ 685              		.loc 1 563 9 discriminator 1 view .LVU210
  686 001a 0D4B     		ldr	r3, .L32+12
  687 001c 1870     		strb	r0, [r3]
- 562:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 688              		.loc 1 562 2 is_stmt 1 view .LVU211
- 689              		.loc 1 562 12 is_stmt 0 view .LVU212
+ 564:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
+ 688              		.loc 1 564 2 is_stmt 1 view .LVU211
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 25
+
+
+ 689              		.loc 1 564 12 is_stmt 0 view .LVU212
  690 001e 0D4C     		ldr	r4, .L32+16
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 25
-
-
  691 0020 0097     		str	r7, [sp]
  692 0022 0223     		movs	r3, #2
  693 0024 2246     		mov	r2, r4
@@ -1448,18 +1450,18 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  695 0028 2846     		mov	r0, r5
  696 002a FFF7FEFF 		bl	HAL_I2C_Master_Receive
  697              	.LVL19:
- 698              		.loc 1 562 10 discriminator 1 view .LVU213
+ 698              		.loc 1 564 10 discriminator 1 view .LVU213
  699 002e 0A4B     		ldr	r3, .L32+20
  700 0030 1880     		strh	r0, [r3]	@ movhi
- 563:Src/main.c    **** 	return ((uint16_t)recData[1]<<8 | recData[2]);
- 701              		.loc 1 563 2 is_stmt 1 view .LVU214
- 702              		.loc 1 563 27 is_stmt 0 view .LVU215
+ 565:Src/main.c    **** 	return ((uint16_t)recData[1]<<8 | recData[2]);
+ 701              		.loc 1 565 2 is_stmt 1 view .LVU214
+ 702              		.loc 1 565 27 is_stmt 0 view .LVU215
  703 0032 2246     		mov	r2, r4
  704 0034 12F80109 		ldrb	r0, [r2], #-1	@ zero_extendqisi2
- 705              		.loc 1 563 43 view .LVU216
+ 705              		.loc 1 565 43 view .LVU216
  706 0038 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
- 564:Src/main.c    **** }
- 707              		.loc 1 564 1 view .LVU217
+ 566:Src/main.c    **** }
+ 707              		.loc 1 566 1 view .LVU217
  708 003a 43EA0020 		orr	r0, r3, r0, lsl #8
  709 003e 03B0     		add	sp, sp, #12
  710              	.LCFI12:
@@ -1485,9 +1487,9 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  731              		.thumb_func
  733              	GetBusVoltageReg:
  734              	.LFB136:
- 565:Src/main.c    **** 
- 566:Src/main.c    **** uint16_t GetBusVoltageReg(void){
- 735              		.loc 1 566 32 is_stmt 1 view -0
+ 567:Src/main.c    **** 
+ 568:Src/main.c    **** uint16_t GetBusVoltageReg(void){
+ 735              		.loc 1 568 32 is_stmt 1 view -0
  736              		.cfi_startproc
  737              		@ args = 0, pretend = 0, frame = 0
  738              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1496,25 +1498,25 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  741              		.cfi_def_cfa_offset 24
  742              		.cfi_offset 4, -24
  743              		.cfi_offset 5, -20
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 26
+
+
  744              		.cfi_offset 6, -16
  745              		.cfi_offset 7, -12
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 26
-
-
  746              		.cfi_offset 8, -8
  747              		.cfi_offset 14, -4
  748 0004 82B0     		sub	sp, sp, #8
  749              	.LCFI14:
  750              		.cfi_def_cfa_offset 32
- 567:Src/main.c    **** 	I2C_Data[0] = 0x02;
- 751              		.loc 1 567 2 view .LVU219
- 752              		.loc 1 567 14 is_stmt 0 view .LVU220
+ 569:Src/main.c    **** 	I2C_Data[0] = 0x02;
+ 751              		.loc 1 569 2 view .LVU219
+ 752              		.loc 1 569 14 is_stmt 0 view .LVU220
  753 0006 124A     		ldr	r2, .L36
  754 0008 0227     		movs	r7, #2
  755 000a 1770     		strb	r7, [r2]
- 568:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 1, 10);
- 756              		.loc 1 568 2 is_stmt 1 view .LVU221
- 757              		.loc 1 568 12 is_stmt 0 view .LVU222
+ 570:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 1, 10);
+ 756              		.loc 1 570 2 is_stmt 1 view .LVU221
+ 757              		.loc 1 570 12 is_stmt 0 view .LVU222
  758 000c 114E     		ldr	r6, .L36+4
  759 000e 124D     		ldr	r5, .L36+8
  760 0010 4FF00A08 		mov	r8, #10
@@ -1524,12 +1526,12 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  764 001c 2846     		mov	r0, r5
  765 001e FFF7FEFF 		bl	HAL_I2C_Master_Transmit
  766              	.LVL20:
- 767              		.loc 1 568 9 discriminator 1 view .LVU223
+ 767              		.loc 1 570 9 discriminator 1 view .LVU223
  768 0022 0E4B     		ldr	r3, .L36+12
  769 0024 1870     		strb	r0, [r3]
- 569:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 770              		.loc 1 569 2 is_stmt 1 view .LVU224
- 771              		.loc 1 569 12 is_stmt 0 view .LVU225
+ 571:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
+ 770              		.loc 1 571 2 is_stmt 1 view .LVU224
+ 771              		.loc 1 571 12 is_stmt 0 view .LVU225
  772 0026 0E4C     		ldr	r4, .L36+16
  773 0028 CDF80080 		str	r8, [sp]
  774 002c 3B46     		mov	r3, r7
@@ -1538,29 +1540,29 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  777 0032 2846     		mov	r0, r5
  778 0034 FFF7FEFF 		bl	HAL_I2C_Master_Receive
  779              	.LVL21:
- 780              		.loc 1 569 10 discriminator 1 view .LVU226
+ 780              		.loc 1 571 10 discriminator 1 view .LVU226
  781 0038 0A4B     		ldr	r3, .L36+20
  782 003a 1880     		strh	r0, [r3]	@ movhi
- 570:Src/main.c    **** 	return ((uint16_t)recData[1]<<8 | recData[2]);
- 783              		.loc 1 570 2 is_stmt 1 view .LVU227
- 784              		.loc 1 570 27 is_stmt 0 view .LVU228
+ 572:Src/main.c    **** 	return ((uint16_t)recData[1]<<8 | recData[2]);
+ 783              		.loc 1 572 2 is_stmt 1 view .LVU227
+ 784              		.loc 1 572 27 is_stmt 0 view .LVU228
  785 003c 2246     		mov	r2, r4
  786 003e 12F80109 		ldrb	r0, [r2], #-1	@ zero_extendqisi2
- 787              		.loc 1 570 43 view .LVU229
+ 787              		.loc 1 572 43 view .LVU229
  788 0042 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
- 571:Src/main.c    **** }
- 789              		.loc 1 571 1 view .LVU230
+ 573:Src/main.c    **** }
+ 789              		.loc 1 573 1 view .LVU230
  790 0044 43EA0020 		orr	r0, r3, r0, lsl #8
  791 0048 02B0     		add	sp, sp, #8
  792              	.LCFI15:
  793              		.cfi_def_cfa_offset 24
  794              		@ sp needed
  795 004a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 27
+
+
  796              	.L37:
  797 004e 00BF     		.align	2
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 27
-
-
  798              	.L36:
  799 0050 00000000 		.word	I2C_Data
  800 0054 00000000 		.word	devAddr
@@ -1578,9 +1580,9 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  813              		.thumb_func
  815              	GetCurrentReg:
  816              	.LFB137:
- 572:Src/main.c    **** 
- 573:Src/main.c    **** uint16_t GetCurrentReg(void){
- 817              		.loc 1 573 29 is_stmt 1 view -0
+ 574:Src/main.c    **** 
+ 575:Src/main.c    **** uint16_t GetCurrentReg(void){
+ 817              		.loc 1 575 29 is_stmt 1 view -0
  818              		.cfi_startproc
  819              		@ args = 0, pretend = 0, frame = 0
  820              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1595,15 +1597,15 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  829 0002 83B0     		sub	sp, sp, #12
  830              	.LCFI17:
  831              		.cfi_def_cfa_offset 32
- 574:Src/main.c    **** 	I2C_Data[0] = 0x04;
- 832              		.loc 1 574 2 view .LVU232
- 833              		.loc 1 574 14 is_stmt 0 view .LVU233
+ 576:Src/main.c    **** 	I2C_Data[0] = 0x04;
+ 832              		.loc 1 576 2 view .LVU232
+ 833              		.loc 1 576 14 is_stmt 0 view .LVU233
  834 0004 0F4A     		ldr	r2, .L40
  835 0006 0423     		movs	r3, #4
  836 0008 1370     		strb	r3, [r2]
- 575:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 1, 10);
- 837              		.loc 1 575 2 is_stmt 1 view .LVU234
- 838              		.loc 1 575 12 is_stmt 0 view .LVU235
+ 577:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 1, 10);
+ 837              		.loc 1 577 2 is_stmt 1 view .LVU234
+ 838              		.loc 1 577 12 is_stmt 0 view .LVU235
  839 000a 0F4E     		ldr	r6, .L40+4
  840 000c 0F4D     		ldr	r5, .L40+8
  841 000e 0A27     		movs	r7, #10
@@ -1613,15 +1615,15 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  845 0016 2846     		mov	r0, r5
  846 0018 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
  847              	.LVL22:
- 848              		.loc 1 575 9 discriminator 1 view .LVU236
+ 848              		.loc 1 577 9 discriminator 1 view .LVU236
  849 001c 0C4B     		ldr	r3, .L40+12
  850 001e 1870     		strb	r0, [r3]
- 576:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 851              		.loc 1 576 2 is_stmt 1 view .LVU237
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 28
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 28
 
 
- 852              		.loc 1 576 12 is_stmt 0 view .LVU238
+ 578:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
+ 851              		.loc 1 578 2 is_stmt 1 view .LVU237
+ 852              		.loc 1 578 12 is_stmt 0 view .LVU238
  853 0020 0C4C     		ldr	r4, .L40+16
  854 0022 0097     		str	r7, [sp]
  855 0024 0223     		movs	r3, #2
@@ -1630,18 +1632,18 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  858 002a 2846     		mov	r0, r5
  859 002c FFF7FEFF 		bl	HAL_I2C_Master_Receive
  860              	.LVL23:
- 861              		.loc 1 576 10 discriminator 1 view .LVU239
+ 861              		.loc 1 578 10 discriminator 1 view .LVU239
  862 0030 094B     		ldr	r3, .L40+20
  863 0032 1880     		strh	r0, [r3]	@ movhi
- 577:Src/main.c    **** 	return ((uint16_t)recData[1]<<8 | recData[2]);
- 864              		.loc 1 577 2 is_stmt 1 view .LVU240
- 865              		.loc 1 577 27 is_stmt 0 view .LVU241
+ 579:Src/main.c    **** 	return ((uint16_t)recData[1]<<8 | recData[2]);
+ 864              		.loc 1 579 2 is_stmt 1 view .LVU240
+ 865              		.loc 1 579 27 is_stmt 0 view .LVU241
  866 0034 2246     		mov	r2, r4
  867 0036 12F80109 		ldrb	r0, [r2], #-1	@ zero_extendqisi2
- 868              		.loc 1 577 43 view .LVU242
+ 868              		.loc 1 579 43 view .LVU242
  869 003a 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
- 578:Src/main.c    **** }
- 870              		.loc 1 578 1 view .LVU243
+ 580:Src/main.c    **** }
+ 870              		.loc 1 580 1 view .LVU243
  871 003c 43EA0020 		orr	r0, r3, r0, lsl #8
  872 0040 03B0     		add	sp, sp, #12
  873              	.LCFI18:
@@ -1671,39 +1673,39 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  899              	GetVoltage:
  900              	.LVL24:
  901              	.LFB138:
- 579:Src/main.c    **** 
- 580:Src/main.c    **** float GetVoltage(uint16_t voltageHex){
- 902              		.loc 1 580 38 is_stmt 1 view -0
+ 581:Src/main.c    **** 
+ 582:Src/main.c    **** float GetVoltage(uint16_t voltageHex){
+ 902              		.loc 1 582 38 is_stmt 1 view -0
  903              		.cfi_startproc
  904              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 29
+
+
  905              		@ frame_needed = 0, uses_anonymous_args = 0
- 906              		.loc 1 580 38 is_stmt 0 view .LVU245
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 29
-
-
+ 906              		.loc 1 582 38 is_stmt 0 view .LVU245
  907 0000 08B5     		push	{r3, lr}
  908              	.LCFI19:
  909              		.cfi_def_cfa_offset 8
  910              		.cfi_offset 3, -8
  911              		.cfi_offset 14, -4
- 581:Src/main.c    **** 	uint16_t temp;
- 912              		.loc 1 581 2 is_stmt 1 view .LVU246
- 582:Src/main.c    **** 	if(voltageHex>>15)
- 913              		.loc 1 582 2 view .LVU247
- 914              		.loc 1 582 4 is_stmt 0 view .LVU248
+ 583:Src/main.c    **** 	uint16_t temp;
+ 912              		.loc 1 583 2 is_stmt 1 view .LVU246
+ 584:Src/main.c    **** 	if(voltageHex>>15)
+ 913              		.loc 1 584 2 view .LVU247
+ 914              		.loc 1 584 4 is_stmt 0 view .LVU248
  915 0002 10F4004F 		tst	r0, #32768
  916 0006 0AD1     		bne	.L46
- 583:Src/main.c    **** 	{
- 584:Src/main.c    **** 		temp=~voltageHex;
- 585:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
- 586:Src/main.c    **** 	}
- 587:Src/main.c    **** 	else
- 588:Src/main.c    **** 	return voltageHex*VLSB;
- 917              		.loc 1 588 2 is_stmt 1 view .LVU249
- 918              		.loc 1 588 19 is_stmt 0 view .LVU250
+ 585:Src/main.c    **** 	{
+ 586:Src/main.c    **** 		temp=~voltageHex;
+ 587:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
+ 588:Src/main.c    **** 	}
+ 589:Src/main.c    **** 	else
+ 590:Src/main.c    **** 	return voltageHex*VLSB;
+ 917              		.loc 1 590 2 is_stmt 1 view .LVU249
+ 918              		.loc 1 590 19 is_stmt 0 view .LVU250
  919 0008 FFF7FEFF 		bl	__aeabi_i2d
  920              	.LVL25:
- 921              		.loc 1 588 19 view .LVU251
+ 921              		.loc 1 590 19 view .LVU251
  922 000c 0022     		movs	r2, #0
  923 000e 0B4B     		ldr	r3, .L47
  924 0010 FFF7FEFF 		bl	__aeabi_dmul
@@ -1712,35 +1714,35 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  927              	.LVL27:
  928 0018 00EE100A 		vmov	s0, r0
  929              	.L42:
- 589:Src/main.c    **** }
- 930              		.loc 1 589 1 view .LVU252
+ 591:Src/main.c    **** }
+ 930              		.loc 1 591 1 view .LVU252
  931 001c 08BD     		pop	{r3, pc}
  932              	.LVL28:
  933              	.L46:
- 584:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
- 934              		.loc 1 584 3 is_stmt 1 view .LVU253
- 584:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
- 935              		.loc 1 584 7 is_stmt 0 view .LVU254
+ 586:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
+ 934              		.loc 1 586 3 is_stmt 1 view .LVU253
+ 586:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
+ 935              		.loc 1 586 7 is_stmt 0 view .LVU254
  936 001e C043     		mvns	r0, r0
  937              	.LVL29:
- 584:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
- 938              		.loc 1 584 7 view .LVU255
+ 586:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VLSB);
+ 938              		.loc 1 586 7 view .LVU255
  939 0020 80B2     		uxth	r0, r0
  940              	.LVL30:
- 585:Src/main.c    **** 	}
- 941              		.loc 1 585 3 is_stmt 1 view .LVU256
- 585:Src/main.c    **** 	}
- 942              		.loc 1 585 31 is_stmt 0 view .LVU257
+ 587:Src/main.c    **** 	}
+ 941              		.loc 1 587 3 is_stmt 1 view .LVU256
+ 587:Src/main.c    **** 	}
+ 942              		.loc 1 587 31 is_stmt 0 view .LVU257
  943 0022 C0F10100 		rsb	r0, r0, #1
  944              	.LVL31:
- 585:Src/main.c    **** 	}
- 945              		.loc 1 585 31 view .LVU258
+ 587:Src/main.c    **** 	}
+ 945              		.loc 1 587 31 view .LVU258
  946 0026 FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 30
+
+
  947              	.LVL32:
  948 002a 0022     		movs	r2, #0
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 30
-
-
  949 002c 034B     		ldr	r3, .L47
  950 002e FFF7FEFF 		bl	__aeabi_dmul
  951              	.LVL33:
@@ -1772,13 +1774,13 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  975              	PrintTransmitApproximatedVC:
  976              	.LVL35:
  977              	.LFB134:
- 552:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
- 978              		.loc 1 552 1 is_stmt 1 view -0
+ 553:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
+ 978              		.loc 1 553 1 is_stmt 1 view -0
  979              		.cfi_startproc
  980              		@ args = 0, pretend = 0, frame = 0
  981              		@ frame_needed = 0, uses_anonymous_args = 0
- 552:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
- 982              		.loc 1 552 1 is_stmt 0 view .LVU260
+ 553:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
+ 982              		.loc 1 553 1 is_stmt 0 view .LVU260
  983 0000 30B5     		push	{r4, r5, lr}
  984              	.LCFI20:
  985              		.cfi_def_cfa_offset 12
@@ -1794,1130 +1796,1135 @@ ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 1
  995              	.LCFI22:
  996              		.cfi_def_cfa_offset 56
  997 0008 0446     		mov	r4, r0
- 553:Src/main.c    ****   current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
- 998              		.loc 1 553 3 is_stmt 1 view .LVU261
- 553:Src/main.c    ****   current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
- 999              		.loc 1 553 13 is_stmt 0 view .LVU262
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 31
+ 554:Src/main.c    ****   current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
+ 998              		.loc 1 554 3 is_stmt 1 view .LVU261
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 31
 
 
+ 554:Src/main.c    ****   current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
+ 999              		.loc 1 554 13 is_stmt 0 view .LVU262
  1000 000a FFF7FEFF 		bl	GetBusVoltageReg
  1001              	.LVL36:
- 553:Src/main.c    ****   current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
- 1002              		.loc 1 553 13 discriminator 1 view .LVU263
+ 554:Src/main.c    ****   current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
+ 1002              		.loc 1 554 13 discriminator 1 view .LVU263
  1003 000e FFF7FEFF 		bl	GetVoltage
  1004              	.LVL37:
- 553:Src/main.c    ****   current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
- 1005              		.loc 1 553 43 discriminator 2 view .LVU264
- 1006 0012 DFED247A 		vldr.32	s15, .L51
+ 554:Src/main.c    ****   current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
+ 1005              		.loc 1 554 43 discriminator 2 view .LVU264
+ 1006 0012 DFED257A 		vldr.32	s15, .L51
  1007 0016 80EE278A 		vdiv.f32	s16, s0, s15
- 553:Src/main.c    ****   current = (outCoarse*approxCoefficient + outFine)*k2 + b2;
- 1008              		.loc 1 553 11 discriminator 2 view .LVU265
- 1009 001a 234B     		ldr	r3, .L51+4
+ 554:Src/main.c    ****   current = (outCoarse * approxCoefficient + outFine) * k2 + b2;
+ 1008              		.loc 1 554 11 discriminator 2 view .LVU265
+ 1009 001a 244B     		ldr	r3, .L51+4
  1010 001c 83ED008A 		vstr.32	s16, [r3]
- 554:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1011              		.loc 1 554 3 is_stmt 1 view .LVU266
- 554:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1012              		.loc 1 554 23 is_stmt 0 view .LVU267
- 1013 0020 224B     		ldr	r3, .L51+8
+ 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1011              		.loc 1 555 3 is_stmt 1 view .LVU266
+ 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1012              		.loc 1 555 24 is_stmt 0 view .LVU267
+ 1013 0020 234B     		ldr	r3, .L51+8
  1014 0022 1B88     		ldrh	r3, [r3]
  1015 0024 07EE903A 		vmov	s15, r3	@ int
  1016 0028 B8EEE77A 		vcvt.f32.s32	s14, s15
- 1017 002c 204A     		ldr	r2, .L51+12
+ 1017 002c 214A     		ldr	r2, .L51+12
  1018 002e D2ED007A 		vldr.32	s15, [r2]
  1019 0032 27EE277A 		vmul.f32	s14, s14, s15
- 554:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1020              		.loc 1 554 42 view .LVU268
- 1021 0036 1F4A     		ldr	r2, .L51+16
+ 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1020              		.loc 1 555 44 view .LVU268
+ 1021 0036 204A     		ldr	r2, .L51+16
  1022 0038 1288     		ldrh	r2, [r2]
  1023 003a 07EE902A 		vmov	s15, r2	@ int
  1024 003e F8EEE77A 		vcvt.f32.s32	s15, s15
  1025 0042 77EE877A 		vadd.f32	s15, s15, s14
- 554:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1026              		.loc 1 554 52 view .LVU269
- 1027 0046 1C49     		ldr	r1, .L51+20
+ 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1026              		.loc 1 555 55 view .LVU269
+ 1027 0046 1D49     		ldr	r1, .L51+20
  1028 0048 91ED007A 		vldr.32	s14, [r1]
  1029 004c 67EE877A 		vmul.f32	s15, s15, s14
- 554:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1030              		.loc 1 554 56 view .LVU270
- 1031 0050 1A49     		ldr	r1, .L51+24
+ 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1030              		.loc 1 555 60 view .LVU270
+ 1031 0050 1B49     		ldr	r1, .L51+24
  1032 0052 91ED007A 		vldr.32	s14, [r1]
  1033 0056 77EE877A 		vadd.f32	s15, s15, s14
- 554:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1034              		.loc 1 554 11 view .LVU271
- 1035 005a 1949     		ldr	r1, .L51+28
+ 555:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1034              		.loc 1 555 11 view .LVU271
+ 1035 005a 1A49     		ldr	r1, .L51+28
  1036 005c C1ED007A 		vstr.32	s15, [r1]
- 555:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100+delay);
- 1037              		.loc 1 555 3 is_stmt 1 view .LVU272
- 1038 0060 184D     		ldr	r5, .L51+32
- 1039 0062 1949     		ldr	r1, .L51+36
+ 556:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100);
+ 1037              		.loc 1 556 3 is_stmt 1 view .LVU272
+ 1038 0060 194D     		ldr	r5, .L51+32
+ 1039 0062 1A49     		ldr	r1, .L51+36
  1040 0064 0988     		ldrh	r1, [r1]
  1041 0066 0691     		str	r1, [sp, #24]
  1042 0068 0592     		str	r2, [sp, #20]
  1043 006a 0493     		str	r3, [sp, #16]
  1044 006c 17EE900A 		vmov	r0, s15
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 32
+
+
  1045 0070 FFF7FEFF 		bl	__aeabi_f2d
  1046              	.LVL38:
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 32
-
-
  1047 0074 CDE90201 		strd	r0, [sp, #8]
  1048 0078 18EE100A 		vmov	r0, s16
  1049 007c FFF7FEFF 		bl	__aeabi_f2d
  1050              	.LVL39:
  1051 0080 CDE90001 		strd	r0, [sp]
- 1052 0084 114A     		ldr	r2, .L51+40
+ 1052 0084 124A     		ldr	r2, .L51+40
  1053 0086 2821     		movs	r1, #40
  1054 0088 2846     		mov	r0, r5
  1055 008a FFF7FEFF 		bl	snprintf
  1056              	.LVL40:
- 556:Src/main.c    **** }
- 1057              		.loc 1 556 3 view .LVU273
- 1058 008e 04F16403 		add	r3, r4, #100
- 1059 0092 2822     		movs	r2, #40
- 1060 0094 2946     		mov	r1, r5
- 1061 0096 0E48     		ldr	r0, .L51+44
- 1062 0098 FFF7FEFF 		bl	HAL_UART_Transmit
+ 557:Src/main.c    ****   HAL_Delay(delay);
+ 1057              		.loc 1 557 3 view .LVU273
+ 1058 008e 6423     		movs	r3, #100
+ 1059 0090 2822     		movs	r2, #40
+ 1060 0092 2946     		mov	r1, r5
+ 1061 0094 0F48     		ldr	r0, .L51+44
+ 1062 0096 FFF7FEFF 		bl	HAL_UART_Transmit
  1063              	.LVL41:
- 557:Src/main.c    **** 
- 1064              		.loc 1 557 1 is_stmt 0 view .LVU274
- 1065 009c 09B0     		add	sp, sp, #36
- 1066              	.LCFI23:
- 1067              		.cfi_def_cfa_offset 20
- 1068              		@ sp needed
- 1069 009e BDEC028B 		vldm	sp!, {d8}
- 1070              	.LCFI24:
- 1071              		.cfi_restore 80
- 1072              		.cfi_restore 81
- 1073              		.cfi_def_cfa_offset 12
- 1074 00a2 30BD     		pop	{r4, r5, pc}
- 1075              	.LVL42:
- 1076              	.L52:
- 557:Src/main.c    **** 
- 1077              		.loc 1 557 1 view .LVU275
- 1078              		.align	2
- 1079              	.L51:
- 1080 00a4 00007A44 		.word	1148846080
- 1081 00a8 00000000 		.word	voltage
- 1082 00ac 00000000 		.word	outCoarse
- 1083 00b0 00000000 		.word	approxCoefficient
- 1084 00b4 00000000 		.word	outFine
- 1085 00b8 00000000 		.word	k2
- 1086 00bc 00000000 		.word	b2
- 1087 00c0 00000000 		.word	current
- 1088 00c4 00000000 		.word	data2
- 1089 00c8 00000000 		.word	g_counter
- 1090 00cc 00000000 		.word	.LC0
- 1091 00d0 00000000 		.word	huart2
- 1092              		.cfi_endproc
- 1093              	.LFE134:
- 1095              		.section	.text.GetShuntVoltage,"ax",%progbits
- 1096              		.align	1
- 1097              		.global	GetShuntVoltage
- 1098              		.syntax unified
- 1099              		.thumb
- 1100              		.thumb_func
- 1102              	GetShuntVoltage:
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 33
+ 558:Src/main.c    **** }
+ 1064              		.loc 1 558 3 view .LVU274
+ 1065 009a 2046     		mov	r0, r4
+ 1066 009c FFF7FEFF 		bl	HAL_Delay
+ 1067              	.LVL42:
+ 559:Src/main.c    **** 
+ 1068              		.loc 1 559 1 is_stmt 0 view .LVU275
+ 1069 00a0 09B0     		add	sp, sp, #36
+ 1070              	.LCFI23:
+ 1071              		.cfi_def_cfa_offset 20
+ 1072              		@ sp needed
+ 1073 00a2 BDEC028B 		vldm	sp!, {d8}
+ 1074              	.LCFI24:
+ 1075              		.cfi_restore 80
+ 1076              		.cfi_restore 81
+ 1077              		.cfi_def_cfa_offset 12
+ 1078 00a6 30BD     		pop	{r4, r5, pc}
+ 1079              	.LVL43:
+ 1080              	.L52:
+ 559:Src/main.c    **** 
+ 1081              		.loc 1 559 1 view .LVU276
+ 1082              		.align	2
+ 1083              	.L51:
+ 1084 00a8 00007A44 		.word	1148846080
+ 1085 00ac 00000000 		.word	voltage
+ 1086 00b0 00000000 		.word	outCoarse
+ 1087 00b4 00000000 		.word	approxCoefficient
+ 1088 00b8 00000000 		.word	outFine
+ 1089 00bc 00000000 		.word	k2
+ 1090 00c0 00000000 		.word	b2
+ 1091 00c4 00000000 		.word	current
+ 1092 00c8 00000000 		.word	data2
+ 1093 00cc 00000000 		.word	g_counter
+ 1094 00d0 00000000 		.word	.LC0
+ 1095 00d4 00000000 		.word	huart2
+ 1096              		.cfi_endproc
+ 1097              	.LFE134:
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 33
 
 
- 1103              	.LVL43:
- 1104              	.LFB139:
- 590:Src/main.c    **** 
- 591:Src/main.c    **** float GetShuntVoltage(uint16_t voltageHex){
- 1105              		.loc 1 591 43 is_stmt 1 view -0
- 1106              		.cfi_startproc
- 1107              		@ args = 0, pretend = 0, frame = 0
- 1108              		@ frame_needed = 0, uses_anonymous_args = 0
- 1109              		.loc 1 591 43 is_stmt 0 view .LVU277
- 1110 0000 08B5     		push	{r3, lr}
- 1111              	.LCFI25:
- 1112              		.cfi_def_cfa_offset 8
- 1113              		.cfi_offset 3, -8
- 1114              		.cfi_offset 14, -4
- 592:Src/main.c    **** 	uint16_t temp;
- 1115              		.loc 1 592 2 is_stmt 1 view .LVU278
- 593:Src/main.c    **** 	if(voltageHex>>15)
- 1116              		.loc 1 593 2 view .LVU279
- 1117              		.loc 1 593 4 is_stmt 0 view .LVU280
- 1118 0002 10F4004F 		tst	r0, #32768
- 1119 0006 0BD1     		bne	.L57
- 594:Src/main.c    **** 	{
- 595:Src/main.c    **** 		temp=~voltageHex;
- 596:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
- 597:Src/main.c    **** 	}
- 598:Src/main.c    **** 	else
- 599:Src/main.c    **** 	  return voltageHex*VSLSB;
- 1120              		.loc 1 599 4 is_stmt 1 view .LVU281
- 1121              		.loc 1 599 21 is_stmt 0 view .LVU282
- 1122 0008 FFF7FEFF 		bl	__aeabi_i2d
- 1123              	.LVL44:
- 1124              		.loc 1 599 21 view .LVU283
- 1125 000c 0CA3     		adr	r3, .L58
- 1126 000e D3E90023 		ldrd	r2, [r3]
- 1127 0012 FFF7FEFF 		bl	__aeabi_dmul
- 1128              	.LVL45:
- 1129 0016 FFF7FEFF 		bl	__aeabi_d2f
- 1130              	.LVL46:
- 1131 001a 00EE100A 		vmov	s0, r0
- 1132              	.L53:
- 600:Src/main.c    **** }
- 1133              		.loc 1 600 1 view .LVU284
- 1134 001e 08BD     		pop	{r3, pc}
- 1135              	.LVL47:
- 1136              	.L57:
- 595:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
- 1137              		.loc 1 595 3 is_stmt 1 view .LVU285
- 595:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
- 1138              		.loc 1 595 7 is_stmt 0 view .LVU286
- 1139 0020 C043     		mvns	r0, r0
- 1140              	.LVL48:
- 595:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
- 1141              		.loc 1 595 7 view .LVU287
- 1142 0022 80B2     		uxth	r0, r0
- 1143              	.LVL49:
- 596:Src/main.c    **** 	}
- 1144              		.loc 1 596 3 is_stmt 1 view .LVU288
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 34
+ 1099              		.section	.text.GetShuntVoltage,"ax",%progbits
+ 1100              		.align	1
+ 1101              		.global	GetShuntVoltage
+ 1102              		.syntax unified
+ 1103              		.thumb
+ 1104              		.thumb_func
+ 1106              	GetShuntVoltage:
+ 1107              	.LVL44:
+ 1108              	.LFB139:
+ 592:Src/main.c    **** 
+ 593:Src/main.c    **** float GetShuntVoltage(uint16_t voltageHex){
+ 1109              		.loc 1 593 43 is_stmt 1 view -0
+ 1110              		.cfi_startproc
+ 1111              		@ args = 0, pretend = 0, frame = 0
+ 1112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1113              		.loc 1 593 43 is_stmt 0 view .LVU278
+ 1114 0000 08B5     		push	{r3, lr}
+ 1115              	.LCFI25:
+ 1116              		.cfi_def_cfa_offset 8
+ 1117              		.cfi_offset 3, -8
+ 1118              		.cfi_offset 14, -4
+ 594:Src/main.c    **** 	uint16_t temp;
+ 1119              		.loc 1 594 2 is_stmt 1 view .LVU279
+ 595:Src/main.c    **** 	if(voltageHex>>15)
+ 1120              		.loc 1 595 2 view .LVU280
+ 1121              		.loc 1 595 4 is_stmt 0 view .LVU281
+ 1122 0002 10F4004F 		tst	r0, #32768
+ 1123 0006 0BD1     		bne	.L57
+ 596:Src/main.c    **** 	{
+ 597:Src/main.c    **** 		temp=~voltageHex;
+ 598:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
+ 599:Src/main.c    **** 	}
+ 600:Src/main.c    **** 	else
+ 601:Src/main.c    **** 	  return voltageHex*VSLSB;
+ 1124              		.loc 1 601 4 is_stmt 1 view .LVU282
+ 1125              		.loc 1 601 21 is_stmt 0 view .LVU283
+ 1126 0008 FFF7FEFF 		bl	__aeabi_i2d
+ 1127              	.LVL45:
+ 1128              		.loc 1 601 21 view .LVU284
+ 1129 000c 0CA3     		adr	r3, .L58
+ 1130 000e D3E90023 		ldrd	r2, [r3]
+ 1131 0012 FFF7FEFF 		bl	__aeabi_dmul
+ 1132              	.LVL46:
+ 1133 0016 FFF7FEFF 		bl	__aeabi_d2f
+ 1134              	.LVL47:
+ 1135 001a 00EE100A 		vmov	s0, r0
+ 1136              	.L53:
+ 602:Src/main.c    **** }
+ 1137              		.loc 1 602 1 view .LVU285
+ 1138 001e 08BD     		pop	{r3, pc}
+ 1139              	.LVL48:
+ 1140              	.L57:
+ 597:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
+ 1141              		.loc 1 597 3 is_stmt 1 view .LVU286
+ 597:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
+ 1142              		.loc 1 597 7 is_stmt 0 view .LVU287
+ 1143 0020 C043     		mvns	r0, r0
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 34
 
 
- 596:Src/main.c    **** 	}
- 1145              		.loc 1 596 31 is_stmt 0 view .LVU289
- 1146 0024 C0F10100 		rsb	r0, r0, #1
+ 1144              	.LVL49:
+ 597:Src/main.c    **** 		return (((temp*(-1)) + 0x01)*VSLSB);
+ 1145              		.loc 1 597 7 view .LVU288
+ 1146 0022 80B2     		uxth	r0, r0
  1147              	.LVL50:
- 596:Src/main.c    **** 	}
- 1148              		.loc 1 596 31 view .LVU290
- 1149 0028 FFF7FEFF 		bl	__aeabi_i2d
- 1150              	.LVL51:
- 1151 002c 04A3     		adr	r3, .L58
- 1152 002e D3E90023 		ldrd	r2, [r3]
- 1153 0032 FFF7FEFF 		bl	__aeabi_dmul
+ 598:Src/main.c    **** 	}
+ 1148              		.loc 1 598 3 is_stmt 1 view .LVU289
+ 598:Src/main.c    **** 	}
+ 1149              		.loc 1 598 31 is_stmt 0 view .LVU290
+ 1150 0024 C0F10100 		rsb	r0, r0, #1
+ 1151              	.LVL51:
+ 598:Src/main.c    **** 	}
+ 1152              		.loc 1 598 31 view .LVU291
+ 1153 0028 FFF7FEFF 		bl	__aeabi_i2d
  1154              	.LVL52:
- 1155 0036 FFF7FEFF 		bl	__aeabi_d2f
- 1156              	.LVL53:
- 1157 003a 00EE100A 		vmov	s0, r0
- 1158 003e EEE7     		b	.L53
- 1159              	.L59:
- 1160              		.align	3
- 1161              	.L58:
- 1162 0040 7B14AE47 		.word	1202590843
- 1163 0044 E17A643F 		.word	1063549665
- 1164              		.cfi_endproc
- 1165              	.LFE139:
- 1167              		.section	.text.GetCurrent,"ax",%progbits
- 1168              		.align	1
- 1169              		.global	GetCurrent
- 1170              		.syntax unified
- 1171              		.thumb
- 1172              		.thumb_func
- 1174              	GetCurrent:
- 1175              	.LVL54:
- 1176              	.LFB140:
- 601:Src/main.c    **** 
- 602:Src/main.c    **** float GetCurrent(uint16_t currentHex){
- 1177              		.loc 1 602 38 is_stmt 1 view -0
- 1178              		.cfi_startproc
- 1179              		@ args = 0, pretend = 0, frame = 0
- 1180              		@ frame_needed = 0, uses_anonymous_args = 0
- 1181              		.loc 1 602 38 is_stmt 0 view .LVU292
- 1182 0000 08B5     		push	{r3, lr}
- 1183              	.LCFI26:
- 1184              		.cfi_def_cfa_offset 8
- 1185              		.cfi_offset 3, -8
- 1186              		.cfi_offset 14, -4
- 603:Src/main.c    ****   /*	
- 604:Src/main.c    ****   uint16_t temp;
- 605:Src/main.c    **** 	if((currentHex>>15) & (currentHex<=0xFFF9))
- 606:Src/main.c    **** 		return 0;
- 607:Src/main.c    **** 	if((currentHex>>15) & (currentHex>=0xFFFA))
- 608:Src/main.c    ****   {
- 609:Src/main.c    **** 		temp = ~currentHex;
- 610:Src/main.c    **** 	  return (((temp*(-1))+ 0x06)*CLSB);
- 611:Src/main.c    **** 	}
- 612:Src/main.c    ****   else
- 613:Src/main.c    **** 	  return (currentHex+5)*CLSB;
- 614:Src/main.c    ****   */
- 615:Src/main.c    **** 	uint16_t temp;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 35
+ 1155 002c 04A3     		adr	r3, .L58
+ 1156 002e D3E90023 		ldrd	r2, [r3]
+ 1157 0032 FFF7FEFF 		bl	__aeabi_dmul
+ 1158              	.LVL53:
+ 1159 0036 FFF7FEFF 		bl	__aeabi_d2f
+ 1160              	.LVL54:
+ 1161 003a 00EE100A 		vmov	s0, r0
+ 1162 003e EEE7     		b	.L53
+ 1163              	.L59:
+ 1164              		.align	3
+ 1165              	.L58:
+ 1166 0040 7B14AE47 		.word	1202590843
+ 1167 0044 E17A643F 		.word	1063549665
+ 1168              		.cfi_endproc
+ 1169              	.LFE139:
+ 1171              		.section	.text.GetCurrent,"ax",%progbits
+ 1172              		.align	1
+ 1173              		.global	GetCurrent
+ 1174              		.syntax unified
+ 1175              		.thumb
+ 1176              		.thumb_func
+ 1178              	GetCurrent:
+ 1179              	.LVL55:
+ 1180              	.LFB140:
+ 603:Src/main.c    **** 
+ 604:Src/main.c    **** float GetCurrent(uint16_t currentHex){
+ 1181              		.loc 1 604 38 is_stmt 1 view -0
+ 1182              		.cfi_startproc
+ 1183              		@ args = 0, pretend = 0, frame = 0
+ 1184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1185              		.loc 1 604 38 is_stmt 0 view .LVU293
+ 1186 0000 08B5     		push	{r3, lr}
+ 1187              	.LCFI26:
+ 1188              		.cfi_def_cfa_offset 8
+ 1189              		.cfi_offset 3, -8
+ 1190              		.cfi_offset 14, -4
+ 605:Src/main.c    ****   /*	
+ 606:Src/main.c    ****   uint16_t temp;
+ 607:Src/main.c    **** 	if((currentHex>>15) & (currentHex<=0xFFF9))
+ 608:Src/main.c    **** 		return 0;
+ 609:Src/main.c    **** 	if((currentHex>>15) & (currentHex>=0xFFFA))
+ 610:Src/main.c    ****   {
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 35
 
 
- 1187              		.loc 1 615 2 is_stmt 1 view .LVU293
- 616:Src/main.c    **** 	if(currentHex>>15)
- 1188              		.loc 1 616 2 view .LVU294
- 1189              		.loc 1 616 4 is_stmt 0 view .LVU295
- 1190 0002 10F4004F 		tst	r0, #32768
- 1191 0006 0BD1     		bne	.L64
- 617:Src/main.c    **** 	{
- 618:Src/main.c    **** 		temp=~currentHex;
- 619:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
- 620:Src/main.c    **** 	}
- 621:Src/main.c    **** 	else
- 622:Src/main.c    **** 	  return currentHex*CLSB;
- 1192              		.loc 1 622 4 is_stmt 1 view .LVU296
- 1193              		.loc 1 622 21 is_stmt 0 view .LVU297
- 1194 0008 FFF7FEFF 		bl	__aeabi_i2d
- 1195              	.LVL55:
- 1196              		.loc 1 622 21 view .LVU298
- 1197 000c 0CA3     		adr	r3, .L65
- 1198 000e D3E90023 		ldrd	r2, [r3]
- 1199 0012 FFF7FEFF 		bl	__aeabi_dmul
- 1200              	.LVL56:
- 1201 0016 FFF7FEFF 		bl	__aeabi_d2f
- 1202              	.LVL57:
- 1203 001a 00EE100A 		vmov	s0, r0
- 1204              	.L60:
- 623:Src/main.c    **** }
- 1205              		.loc 1 623 1 view .LVU299
- 1206 001e 08BD     		pop	{r3, pc}
- 1207              	.LVL58:
- 1208              	.L64:
- 618:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
- 1209              		.loc 1 618 3 is_stmt 1 view .LVU300
- 618:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
- 1210              		.loc 1 618 7 is_stmt 0 view .LVU301
- 1211 0020 C043     		mvns	r0, r0
- 1212              	.LVL59:
- 618:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
- 1213              		.loc 1 618 7 view .LVU302
- 1214 0022 80B2     		uxth	r0, r0
- 1215              	.LVL60:
- 619:Src/main.c    **** 	}
- 1216              		.loc 1 619 3 is_stmt 1 view .LVU303
- 619:Src/main.c    **** 	}
- 1217              		.loc 1 619 30 is_stmt 0 view .LVU304
- 1218 0024 C0F10100 		rsb	r0, r0, #1
+ 611:Src/main.c    **** 		temp = ~currentHex;
+ 612:Src/main.c    **** 	  return (((temp*(-1))+ 0x06)*CLSB);
+ 613:Src/main.c    **** 	}
+ 614:Src/main.c    ****   else
+ 615:Src/main.c    **** 	  return (currentHex+5)*CLSB;
+ 616:Src/main.c    ****   */
+ 617:Src/main.c    **** 	uint16_t temp;
+ 1191              		.loc 1 617 2 is_stmt 1 view .LVU294
+ 618:Src/main.c    **** 	if(currentHex>>15)
+ 1192              		.loc 1 618 2 view .LVU295
+ 1193              		.loc 1 618 4 is_stmt 0 view .LVU296
+ 1194 0002 10F4004F 		tst	r0, #32768
+ 1195 0006 0BD1     		bne	.L64
+ 619:Src/main.c    **** 	{
+ 620:Src/main.c    **** 		temp=~currentHex;
+ 621:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
+ 622:Src/main.c    **** 	}
+ 623:Src/main.c    **** 	else
+ 624:Src/main.c    **** 	  return currentHex*CLSB;
+ 1196              		.loc 1 624 4 is_stmt 1 view .LVU297
+ 1197              		.loc 1 624 21 is_stmt 0 view .LVU298
+ 1198 0008 FFF7FEFF 		bl	__aeabi_i2d
+ 1199              	.LVL56:
+ 1200              		.loc 1 624 21 view .LVU299
+ 1201 000c 0CA3     		adr	r3, .L65
+ 1202 000e D3E90023 		ldrd	r2, [r3]
+ 1203 0012 FFF7FEFF 		bl	__aeabi_dmul
+ 1204              	.LVL57:
+ 1205 0016 FFF7FEFF 		bl	__aeabi_d2f
+ 1206              	.LVL58:
+ 1207 001a 00EE100A 		vmov	s0, r0
+ 1208              	.L60:
+ 625:Src/main.c    **** }
+ 1209              		.loc 1 625 1 view .LVU300
+ 1210 001e 08BD     		pop	{r3, pc}
+ 1211              	.LVL59:
+ 1212              	.L64:
+ 620:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
+ 1213              		.loc 1 620 3 is_stmt 1 view .LVU301
+ 620:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
+ 1214              		.loc 1 620 7 is_stmt 0 view .LVU302
+ 1215 0020 C043     		mvns	r0, r0
+ 1216              	.LVL60:
+ 620:Src/main.c    **** 		return (((temp*(-1))+ 0x01)*CLSB);
+ 1217              		.loc 1 620 7 view .LVU303
+ 1218 0022 80B2     		uxth	r0, r0
  1219              	.LVL61:
- 619:Src/main.c    **** 	}
- 1220              		.loc 1 619 30 view .LVU305
- 1221 0028 FFF7FEFF 		bl	__aeabi_i2d
- 1222              	.LVL62:
- 1223 002c 04A3     		adr	r3, .L65
- 1224 002e D3E90023 		ldrd	r2, [r3]
- 1225 0032 FFF7FEFF 		bl	__aeabi_dmul
+ 621:Src/main.c    **** 	}
+ 1220              		.loc 1 621 3 is_stmt 1 view .LVU304
+ 621:Src/main.c    **** 	}
+ 1221              		.loc 1 621 30 is_stmt 0 view .LVU305
+ 1222 0024 C0F10100 		rsb	r0, r0, #1
+ 1223              	.LVL62:
+ 621:Src/main.c    **** 	}
+ 1224              		.loc 1 621 30 view .LVU306
+ 1225 0028 FFF7FEFF 		bl	__aeabi_i2d
  1226              	.LVL63:
- 1227 0036 FFF7FEFF 		bl	__aeabi_d2f
- 1228              	.LVL64:
- 1229 003a 00EE100A 		vmov	s0, r0
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 36
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 36
 
 
- 1230 003e EEE7     		b	.L60
- 1231              	.L66:
- 1232              		.align	3
- 1233              	.L65:
- 1234 0040 9A999999 		.word	-1717986918
- 1235 0044 9999993F 		.word	1067030937
- 1236              		.cfi_endproc
- 1237              	.LFE140:
- 1239              		.section	.text.PrintTransmitMeasuredVC,"ax",%progbits
- 1240              		.align	1
- 1241              		.global	PrintTransmitMeasuredVC
- 1242              		.syntax unified
- 1243              		.thumb
- 1244              		.thumb_func
- 1246              	PrintTransmitMeasuredVC:
- 1247              	.LVL65:
- 1248              	.LFB133:
+ 1227 002c 04A3     		adr	r3, .L65
+ 1228 002e D3E90023 		ldrd	r2, [r3]
+ 1229 0032 FFF7FEFF 		bl	__aeabi_dmul
+ 1230              	.LVL64:
+ 1231 0036 FFF7FEFF 		bl	__aeabi_d2f
+ 1232              	.LVL65:
+ 1233 003a 00EE100A 		vmov	s0, r0
+ 1234 003e EEE7     		b	.L60
+ 1235              	.L66:
+ 1236              		.align	3
+ 1237              	.L65:
+ 1238 0040 9A999999 		.word	-1717986918
+ 1239 0044 9999993F 		.word	1067030937
+ 1240              		.cfi_endproc
+ 1241              	.LFE140:
+ 1243              		.section	.text.PrintTransmitMeasuredVC,"ax",%progbits
+ 1244              		.align	1
+ 1245              		.global	PrintTransmitMeasuredVC
+ 1246              		.syntax unified
+ 1247              		.thumb
+ 1248              		.thumb_func
+ 1250              	PrintTransmitMeasuredVC:
+ 1251              	.LVL66:
+ 1252              	.LFB133:
  539:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
- 1249              		.loc 1 539 1 is_stmt 1 view -0
- 1250              		.cfi_startproc
- 1251              		@ args = 0, pretend = 0, frame = 0
- 1252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1253              		.loc 1 539 1 is_stmt 1 view -0
+ 1254              		.cfi_startproc
+ 1255              		@ args = 0, pretend = 0, frame = 0
+ 1256              		@ frame_needed = 0, uses_anonymous_args = 0
  539:Src/main.c    ****   voltage = GetVoltage(GetBusVoltageReg())/1000;
- 1253              		.loc 1 539 1 is_stmt 0 view .LVU307
- 1254 0000 70B5     		push	{r4, r5, r6, lr}
- 1255              	.LCFI27:
- 1256              		.cfi_def_cfa_offset 16
- 1257              		.cfi_offset 4, -16
- 1258              		.cfi_offset 5, -12
- 1259              		.cfi_offset 6, -8
- 1260              		.cfi_offset 14, -4
- 1261 0002 88B0     		sub	sp, sp, #32
- 1262              	.LCFI28:
- 1263              		.cfi_def_cfa_offset 48
- 1264 0004 0446     		mov	r4, r0
+ 1257              		.loc 1 539 1 is_stmt 0 view .LVU308
+ 1258 0000 70B5     		push	{r4, r5, r6, lr}
+ 1259              	.LCFI27:
+ 1260              		.cfi_def_cfa_offset 16
+ 1261              		.cfi_offset 4, -16
+ 1262              		.cfi_offset 5, -12
+ 1263              		.cfi_offset 6, -8
+ 1264              		.cfi_offset 14, -4
+ 1265 0002 88B0     		sub	sp, sp, #32
+ 1266              	.LCFI28:
+ 1267              		.cfi_def_cfa_offset 48
+ 1268 0004 0446     		mov	r4, r0
  540:Src/main.c    ****   current = GetCurrent(GetCurrentReg());
- 1265              		.loc 1 540 3 is_stmt 1 view .LVU308
+ 1269              		.loc 1 540 3 is_stmt 1 view .LVU309
  540:Src/main.c    ****   current = GetCurrent(GetCurrentReg());
- 1266              		.loc 1 540 13 is_stmt 0 view .LVU309
- 1267 0006 FFF7FEFF 		bl	GetBusVoltageReg
- 1268              	.LVL66:
+ 1270              		.loc 1 540 13 is_stmt 0 view .LVU310
+ 1271 0006 FFF7FEFF 		bl	GetBusVoltageReg
+ 1272              	.LVL67:
  540:Src/main.c    ****   current = GetCurrent(GetCurrentReg());
- 1269              		.loc 1 540 13 discriminator 1 view .LVU310
- 1270 000a FFF7FEFF 		bl	GetVoltage
- 1271              	.LVL67:
+ 1273              		.loc 1 540 13 discriminator 1 view .LVU311
+ 1274 000a FFF7FEFF 		bl	GetVoltage
+ 1275              	.LVL68:
  540:Src/main.c    ****   current = GetCurrent(GetCurrentReg());
- 1272              		.loc 1 540 43 discriminator 2 view .LVU311
- 1273 000e 9FED187A 		vldr.32	s14, .L69
- 1274 0012 C0EE077A 		vdiv.f32	s15, s0, s14
+ 1276              		.loc 1 540 43 discriminator 2 view .LVU312
+ 1277 000e 9FED197A 		vldr.32	s14, .L69
+ 1278 0012 C0EE077A 		vdiv.f32	s15, s0, s14
  540:Src/main.c    ****   current = GetCurrent(GetCurrentReg());
- 1275              		.loc 1 540 11 discriminator 2 view .LVU312
- 1276 0016 174E     		ldr	r6, .L69+4
- 1277 0018 C6ED007A 		vstr.32	s15, [r6]
- 541:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1278              		.loc 1 541 3 is_stmt 1 view .LVU313
- 541:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1279              		.loc 1 541 13 is_stmt 0 view .LVU314
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 37
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 37
 
 
- 1280 001c FFF7FEFF 		bl	GetCurrentReg
- 1281              	.LVL68:
+ 1279              		.loc 1 540 11 discriminator 2 view .LVU313
+ 1280 0016 184E     		ldr	r6, .L69+4
+ 1281 0018 C6ED007A 		vstr.32	s15, [r6]
  541:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1282              		.loc 1 541 13 discriminator 1 view .LVU315
- 1283 0020 FFF7FEFF 		bl	GetCurrent
- 1284              	.LVL69:
- 1285 0024 10EE100A 		vmov	r0, s0
+ 1282              		.loc 1 541 3 is_stmt 1 view .LVU314
  541:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
- 1286              		.loc 1 541 11 discriminator 2 view .LVU316
- 1287 0028 134B     		ldr	r3, .L69+8
- 1288 002a 83ED000A 		vstr.32	s0, [r3]
- 542:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100+delay);
- 1289              		.loc 1 542 3 is_stmt 1 view .LVU317
- 1290 002e 134D     		ldr	r5, .L69+12
- 1291 0030 134B     		ldr	r3, .L69+16
- 1292 0032 1B88     		ldrh	r3, [r3]
- 1293 0034 0693     		str	r3, [sp, #24]
- 1294 0036 134B     		ldr	r3, .L69+20
- 1295 0038 1B88     		ldrh	r3, [r3]
- 1296 003a 0593     		str	r3, [sp, #20]
- 1297 003c 124B     		ldr	r3, .L69+24
- 1298 003e 1B88     		ldrh	r3, [r3]
- 1299 0040 0493     		str	r3, [sp, #16]
- 1300 0042 FFF7FEFF 		bl	__aeabi_f2d
- 1301              	.LVL70:
- 1302 0046 CDE90201 		strd	r0, [sp, #8]
- 1303 004a 3068     		ldr	r0, [r6]	@ float
- 1304 004c FFF7FEFF 		bl	__aeabi_f2d
+ 1283              		.loc 1 541 13 is_stmt 0 view .LVU315
+ 1284 001c FFF7FEFF 		bl	GetCurrentReg
+ 1285              	.LVL69:
+ 541:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1286              		.loc 1 541 13 discriminator 1 view .LVU316
+ 1287 0020 FFF7FEFF 		bl	GetCurrent
+ 1288              	.LVL70:
+ 1289 0024 10EE100A 		vmov	r0, s0
+ 541:Src/main.c    ****   snprintf(data2, sizeof data2, " %1.3f %1.3f %d %d %d \n\r", voltage, current, outCoarse, outFine,
+ 1290              		.loc 1 541 11 discriminator 2 view .LVU317
+ 1291 0028 144B     		ldr	r3, .L69+8
+ 1292 002a 83ED000A 		vstr.32	s0, [r3]
+ 542:Src/main.c    ****   HAL_UART_Transmit(&huart2, data2, sizeof data2, 100);
+ 1293              		.loc 1 542 3 is_stmt 1 view .LVU318
+ 1294 002e 144D     		ldr	r5, .L69+12
+ 1295 0030 144B     		ldr	r3, .L69+16
+ 1296 0032 1B88     		ldrh	r3, [r3]
+ 1297 0034 0693     		str	r3, [sp, #24]
+ 1298 0036 144B     		ldr	r3, .L69+20
+ 1299 0038 1B88     		ldrh	r3, [r3]
+ 1300 003a 0593     		str	r3, [sp, #20]
+ 1301 003c 134B     		ldr	r3, .L69+24
+ 1302 003e 1B88     		ldrh	r3, [r3]
+ 1303 0040 0493     		str	r3, [sp, #16]
+ 1304 0042 FFF7FEFF 		bl	__aeabi_f2d
  1305              	.LVL71:
- 1306 0050 CDE90001 		strd	r0, [sp]
- 1307 0054 0D4A     		ldr	r2, .L69+28
- 1308 0056 2821     		movs	r1, #40
- 1309 0058 2846     		mov	r0, r5
- 1310 005a FFF7FEFF 		bl	snprintf
- 1311              	.LVL72:
- 543:Src/main.c    **** }
- 1312              		.loc 1 543 3 view .LVU318
- 1313 005e 04F16403 		add	r3, r4, #100
- 1314 0062 2822     		movs	r2, #40
- 1315 0064 2946     		mov	r1, r5
- 1316 0066 0A48     		ldr	r0, .L69+32
- 1317 0068 FFF7FEFF 		bl	HAL_UART_Transmit
- 1318              	.LVL73:
- 544:Src/main.c    **** 
- 1319              		.loc 1 544 1 is_stmt 0 view .LVU319
- 1320 006c 08B0     		add	sp, sp, #32
- 1321              	.LCFI29:
- 1322              		.cfi_def_cfa_offset 16
- 1323              		@ sp needed
- 1324 006e 70BD     		pop	{r4, r5, r6, pc}
- 1325              	.LVL74:
- 1326              	.L70:
- 544:Src/main.c    **** 
- 1327              		.loc 1 544 1 view .LVU320
- 1328              		.align	2
- 1329              	.L69:
- 1330 0070 00007A44 		.word	1148846080
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 38
+ 1306 0046 CDE90201 		strd	r0, [sp, #8]
+ 1307 004a 3068     		ldr	r0, [r6]	@ float
+ 1308 004c FFF7FEFF 		bl	__aeabi_f2d
+ 1309              	.LVL72:
+ 1310 0050 CDE90001 		strd	r0, [sp]
+ 1311 0054 0E4A     		ldr	r2, .L69+28
+ 1312 0056 2821     		movs	r1, #40
+ 1313 0058 2846     		mov	r0, r5
+ 1314 005a FFF7FEFF 		bl	snprintf
+ 1315              	.LVL73:
+ 543:Src/main.c    ****   HAL_Delay(delay);
+ 1316              		.loc 1 543 3 view .LVU319
+ 1317 005e 6423     		movs	r3, #100
+ 1318 0060 2822     		movs	r2, #40
+ 1319 0062 2946     		mov	r1, r5
+ 1320 0064 0B48     		ldr	r0, .L69+32
+ 1321 0066 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1322              	.LVL74:
+ 544:Src/main.c    **** }
+ 1323              		.loc 1 544 3 view .LVU320
+ 1324 006a 2046     		mov	r0, r4
+ 1325 006c FFF7FEFF 		bl	HAL_Delay
+ 1326              	.LVL75:
+ 545:Src/main.c    **** 
+ 1327              		.loc 1 545 1 is_stmt 0 view .LVU321
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 38
 
 
- 1331 0074 00000000 		.word	voltage
- 1332 0078 00000000 		.word	current
- 1333 007c 00000000 		.word	data2
- 1334 0080 00000000 		.word	g_counter
- 1335 0084 00000000 		.word	outFine
- 1336 0088 00000000 		.word	outCoarse
- 1337 008c 00000000 		.word	.LC0
- 1338 0090 00000000 		.word	huart2
- 1339              		.cfi_endproc
- 1340              	.LFE133:
- 1342              		.section	.text.main,"ax",%progbits
- 1343              		.align	1
- 1344              		.global	main
- 1345              		.syntax unified
- 1346              		.thumb
- 1347              		.thumb_func
- 1349              	main:
- 1350              	.LFB126:
+ 1328 0070 08B0     		add	sp, sp, #32
+ 1329              	.LCFI29:
+ 1330              		.cfi_def_cfa_offset 16
+ 1331              		@ sp needed
+ 1332 0072 70BD     		pop	{r4, r5, r6, pc}
+ 1333              	.LVL76:
+ 1334              	.L70:
+ 545:Src/main.c    **** 
+ 1335              		.loc 1 545 1 view .LVU322
+ 1336              		.align	2
+ 1337              	.L69:
+ 1338 0074 00007A44 		.word	1148846080
+ 1339 0078 00000000 		.word	voltage
+ 1340 007c 00000000 		.word	current
+ 1341 0080 00000000 		.word	data2
+ 1342 0084 00000000 		.word	g_counter
+ 1343 0088 00000000 		.word	outFine
+ 1344 008c 00000000 		.word	outCoarse
+ 1345 0090 00000000 		.word	.LC0
+ 1346 0094 00000000 		.word	huart2
+ 1347              		.cfi_endproc
+ 1348              	.LFE133:
+ 1350              		.section	.text.main,"ax",%progbits
+ 1351              		.align	1
+ 1352              		.global	main
+ 1353              		.syntax unified
+ 1354              		.thumb
+ 1355              		.thumb_func
+ 1357              	main:
+ 1358              	.LFB126:
  162:Src/main.c    ****   /* USER CODE BEGIN 1 */
- 1351              		.loc 1 162 1 is_stmt 1 view -0
- 1352              		.cfi_startproc
- 1353              		@ Volatile: function does not return.
- 1354              		@ args = 0, pretend = 0, frame = 0
- 1355              		@ frame_needed = 0, uses_anonymous_args = 0
- 1356 0000 80B5     		push	{r7, lr}
- 1357              	.LCFI30:
- 1358              		.cfi_def_cfa_offset 8
- 1359              		.cfi_offset 7, -8
- 1360              		.cfi_offset 14, -4
- 1361 0002 82B0     		sub	sp, sp, #8
- 1362              	.LCFI31:
- 1363              		.cfi_def_cfa_offset 16
+ 1359              		.loc 1 162 1 is_stmt 1 view -0
+ 1360              		.cfi_startproc
+ 1361              		@ Volatile: function does not return.
+ 1362              		@ args = 0, pretend = 0, frame = 0
+ 1363              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1364 0000 80B5     		push	{r7, lr}
+ 1365              	.LCFI30:
+ 1366              		.cfi_def_cfa_offset 8
+ 1367              		.cfi_offset 7, -8
+ 1368              		.cfi_offset 14, -4
+ 1369 0002 82B0     		sub	sp, sp, #8
+ 1370              	.LCFI31:
+ 1371              		.cfi_def_cfa_offset 16
  170:Src/main.c    **** 
- 1364              		.loc 1 170 3 view .LVU322
- 1365 0004 FFF7FEFF 		bl	HAL_Init
- 1366              	.LVL75:
+ 1372              		.loc 1 170 3 view .LVU324
+ 1373 0004 FFF7FEFF 		bl	HAL_Init
+ 1374              	.LVL77:
  177:Src/main.c    **** 
- 1367              		.loc 1 177 3 view .LVU323
- 1368 0008 FFF7FEFF 		bl	SystemClock_Config
- 1369              	.LVL76:
+ 1375              		.loc 1 177 3 view .LVU325
+ 1376 0008 FFF7FEFF 		bl	SystemClock_Config
+ 1377              	.LVL78:
  184:Src/main.c    ****   MX_USART2_UART_Init();
- 1370              		.loc 1 184 3 view .LVU324
- 1371 000c FFF7FEFF 		bl	MX_GPIO_Init
- 1372              	.LVL77:
+ 1378              		.loc 1 184 3 view .LVU326
+ 1379 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 1380              	.LVL79:
  185:Src/main.c    ****   MX_I2C1_Init();
- 1373              		.loc 1 185 3 view .LVU325
- 1374 0010 FFF7FEFF 		bl	MX_USART2_UART_Init
- 1375              	.LVL78:
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 39
+
+
+ 1381              		.loc 1 185 3 view .LVU327
+ 1382 0010 FFF7FEFF 		bl	MX_USART2_UART_Init
+ 1383              	.LVL80:
  186:Src/main.c    ****   MX_SPI1_Init();
- 1376              		.loc 1 186 3 view .LVU326
- 1377 0014 FFF7FEFF 		bl	MX_I2C1_Init
- 1378              	.LVL79:
+ 1384              		.loc 1 186 3 view .LVU328
+ 1385 0014 FFF7FEFF 		bl	MX_I2C1_Init
+ 1386              	.LVL81:
  187:Src/main.c    ****   /* USER CODE BEGIN 2 */
- 1379              		.loc 1 187 3 view .LVU327
- 1380 0018 FFF7FEFF 		bl	MX_SPI1_Init
- 1381              	.LVL80:
+ 1387              		.loc 1 187 3 view .LVU329
+ 1388 0018 FFF7FEFF 		bl	MX_SPI1_Init
+ 1389              	.LVL82:
  194:Src/main.c    **** 	I2C_Data[0] = 0x00;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 39
-
-
- 1382              		.loc 1 194 2 view .LVU328
+ 1390              		.loc 1 194 2 view .LVU330
  194:Src/main.c    **** 	I2C_Data[0] = 0x00;
- 1383              		.loc 1 194 13 is_stmt 0 view .LVU329
- 1384 001c 594B     		ldr	r3, .L76
- 1385 001e 44F22752 		movw	r2, #17703
- 1386 0022 1A80     		strh	r2, [r3]	@ movhi
- 195:Src/main.c    **** 	I2C_Data[1]= (configWord & 0xFF00) >> 8;
- 1387              		.loc 1 195 2 is_stmt 1 view .LVU330
- 195:Src/main.c    **** 	I2C_Data[1]= (configWord & 0xFF00) >> 8;
- 1388              		.loc 1 195 14 is_stmt 0 view .LVU331
- 1389 0024 584C     		ldr	r4, .L76+4
- 1390 0026 0025     		movs	r5, #0
- 1391 0028 2570     		strb	r5, [r4]
+ 1391              		.loc 1 194 13 is_stmt 0 view .LVU331
+ 1392 001c 594B     		ldr	r3, .L76
+ 1393 001e 44F22752 		movw	r2, #17703
+ 1394 0022 1A80     		strh	r2, [r3]	@ movhi
+ 195:Src/main.c    **** 	I2C_Data[1] = (configWord & 0xFF00) >> 8;
+ 1395              		.loc 1 195 2 is_stmt 1 view .LVU332
+ 195:Src/main.c    **** 	I2C_Data[1] = (configWord & 0xFF00) >> 8;
+ 1396              		.loc 1 195 14 is_stmt 0 view .LVU333
+ 1397 0024 584C     		ldr	r4, .L76+4
+ 1398 0026 0025     		movs	r5, #0
+ 1399 0028 2570     		strb	r5, [r4]
  196:Src/main.c    **** 	I2C_Data[2] = (configWord & 0x00FF);
- 1392              		.loc 1 196 2 is_stmt 1 view .LVU332
+ 1400              		.loc 1 196 2 is_stmt 1 view .LVU334
  196:Src/main.c    **** 	I2C_Data[2] = (configWord & 0x00FF);
- 1393              		.loc 1 196 13 is_stmt 0 view .LVU333
- 1394 002a 4523     		movs	r3, #69
- 1395 002c 6370     		strb	r3, [r4, #1]
+ 1401              		.loc 1 196 14 is_stmt 0 view .LVU335
+ 1402 002a 4523     		movs	r3, #69
+ 1403 002c 6370     		strb	r3, [r4, #1]
  197:Src/main.c    **** 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 20);
- 1396              		.loc 1 197 2 is_stmt 1 view .LVU334
+ 1404              		.loc 1 197 2 is_stmt 1 view .LVU336
  197:Src/main.c    **** 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 20);
- 1397              		.loc 1 197 14 is_stmt 0 view .LVU335
- 1398 002e 2723     		movs	r3, #39
- 1399 0030 A370     		strb	r3, [r4, #2]
+ 1405              		.loc 1 197 14 is_stmt 0 view .LVU337
+ 1406 002e 2723     		movs	r3, #39
+ 1407 0030 A370     		strb	r3, [r4, #2]
  198:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 1400              		.loc 1 198 2 is_stmt 1 view .LVU336
- 1401 0032 DFF88481 		ldr	r8, .L76+52
- 1402 0036 554F     		ldr	r7, .L76+8
- 1403 0038 1423     		movs	r3, #20
- 1404 003a 0093     		str	r3, [sp]
- 1405 003c 0323     		movs	r3, #3
- 1406 003e 2246     		mov	r2, r4
- 1407 0040 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
- 1408 0044 3846     		mov	r0, r7
- 1409 0046 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
- 1410              	.LVL81:
+ 1408              		.loc 1 198 2 is_stmt 1 view .LVU338
+ 1409 0032 DFF88481 		ldr	r8, .L76+52
+ 1410 0036 554F     		ldr	r7, .L76+8
+ 1411 0038 1423     		movs	r3, #20
+ 1412 003a 0093     		str	r3, [sp]
+ 1413 003c 0323     		movs	r3, #3
+ 1414 003e 2246     		mov	r2, r4
+ 1415 0040 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
+ 1416 0044 3846     		mov	r0, r7
+ 1417 0046 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 1418              	.LVL83:
  199:Src/main.c    **** 	
- 1411              		.loc 1 199 2 view .LVU337
+ 1419              		.loc 1 199 2 view .LVU339
  199:Src/main.c    **** 	
- 1412              		.loc 1 199 12 is_stmt 0 view .LVU338
- 1413 004a DFF870A1 		ldr	r10, .L76+56
- 1414 004e 0A26     		movs	r6, #10
- 1415 0050 0096     		str	r6, [sp]
- 1416 0052 0223     		movs	r3, #2
- 1417 0054 5246     		mov	r2, r10
- 1418 0056 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
- 1419 005a 3846     		mov	r0, r7
- 1420 005c FFF7FEFF 		bl	HAL_I2C_Master_Receive
- 1421              	.LVL82:
- 199:Src/main.c    **** 	
- 1422              		.loc 1 199 10 discriminator 1 view .LVU339
- 1423 0060 DFF85C91 		ldr	r9, .L76+60
- 1424 0064 A9F80000 		strh	r0, [r9]	@ movhi
- 202:Src/main.c    **** 	I2C_Data[0] = 0x05;
- 1425              		.loc 1 202 2 is_stmt 1 view .LVU340
- 202:Src/main.c    **** 	I2C_Data[0] = 0x05;
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 40
+ 1420              		.loc 1 199 12 is_stmt 0 view .LVU340
+ 1421 004a DFF870A1 		ldr	r10, .L76+56
+ 1422 004e 0A26     		movs	r6, #10
+ 1423 0050 0096     		str	r6, [sp]
+ 1424 0052 0223     		movs	r3, #2
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 40
 
 
- 1426              		.loc 1 202 12 is_stmt 0 view .LVU341
- 1427 0068 494B     		ldr	r3, .L76+12
- 1428 006a 4FF40062 		mov	r2, #2048
- 1429 006e 1A80     		strh	r2, [r3]	@ movhi
- 203:Src/main.c    **** 	I2C_Data[1]= (calibWord & 0xFF00) >> 8;
- 1430              		.loc 1 203 2 is_stmt 1 view .LVU342
- 203:Src/main.c    **** 	I2C_Data[1]= (calibWord & 0xFF00) >> 8;
- 1431              		.loc 1 203 14 is_stmt 0 view .LVU343
- 1432 0070 0523     		movs	r3, #5
- 1433 0072 2370     		strb	r3, [r4]
+ 1425 0054 5246     		mov	r2, r10
+ 1426 0056 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
+ 1427 005a 3846     		mov	r0, r7
+ 1428 005c FFF7FEFF 		bl	HAL_I2C_Master_Receive
+ 1429              	.LVL84:
+ 199:Src/main.c    **** 	
+ 1430              		.loc 1 199 10 discriminator 1 view .LVU341
+ 1431 0060 DFF85C91 		ldr	r9, .L76+60
+ 1432 0064 A9F80000 		strh	r0, [r9]	@ movhi
+ 202:Src/main.c    **** 	I2C_Data[0] = 0x05;
+ 1433              		.loc 1 202 2 is_stmt 1 view .LVU342
+ 202:Src/main.c    **** 	I2C_Data[0] = 0x05;
+ 1434              		.loc 1 202 12 is_stmt 0 view .LVU343
+ 1435 0068 494B     		ldr	r3, .L76+12
+ 1436 006a 4FF40062 		mov	r2, #2048
+ 1437 006e 1A80     		strh	r2, [r3]	@ movhi
+ 203:Src/main.c    **** 	I2C_Data[1] = (calibWord & 0xFF00) >> 8;
+ 1438              		.loc 1 203 2 is_stmt 1 view .LVU344
+ 203:Src/main.c    **** 	I2C_Data[1] = (calibWord & 0xFF00) >> 8;
+ 1439              		.loc 1 203 14 is_stmt 0 view .LVU345
+ 1440 0070 0523     		movs	r3, #5
+ 1441 0072 2370     		strb	r3, [r4]
  204:Src/main.c    **** 	I2C_Data[2] = (calibWord & 0x00FF);
- 1434              		.loc 1 204 2 is_stmt 1 view .LVU344
+ 1442              		.loc 1 204 2 is_stmt 1 view .LVU346
  204:Src/main.c    **** 	I2C_Data[2] = (calibWord & 0x00FF);
- 1435              		.loc 1 204 13 is_stmt 0 view .LVU345
- 1436 0074 0823     		movs	r3, #8
- 1437 0076 6370     		strb	r3, [r4, #1]
+ 1443              		.loc 1 204 14 is_stmt 0 view .LVU347
+ 1444 0074 0823     		movs	r3, #8
+ 1445 0076 6370     		strb	r3, [r4, #1]
  205:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 10);
- 1438              		.loc 1 205 2 is_stmt 1 view .LVU346
+ 1446              		.loc 1 205 2 is_stmt 1 view .LVU348
  205:Src/main.c    **** 	sendOK = 	HAL_I2C_Master_Transmit(&hi2c1, devAddr, I2C_Data, 3, 10);
- 1439              		.loc 1 205 14 is_stmt 0 view .LVU347
- 1440 0078 A570     		strb	r5, [r4, #2]
+ 1447              		.loc 1 205 14 is_stmt 0 view .LVU349
+ 1448 0078 A570     		strb	r5, [r4, #2]
  206:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 1441              		.loc 1 206 2 is_stmt 1 view .LVU348
+ 1449              		.loc 1 206 2 is_stmt 1 view .LVU350
  206:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 1442              		.loc 1 206 12 is_stmt 0 view .LVU349
- 1443 007a 0096     		str	r6, [sp]
- 1444 007c 0323     		movs	r3, #3
- 1445 007e 2246     		mov	r2, r4
- 1446 0080 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
- 1447 0084 3846     		mov	r0, r7
- 1448 0086 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
- 1449              	.LVL83:
+ 1450              		.loc 1 206 12 is_stmt 0 view .LVU351
+ 1451 007a 0096     		str	r6, [sp]
+ 1452 007c 0323     		movs	r3, #3
+ 1453 007e 2246     		mov	r2, r4
+ 1454 0080 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
+ 1455 0084 3846     		mov	r0, r7
+ 1456 0086 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 1457              	.LVL85:
  206:Src/main.c    **** 	receive = HAL_I2C_Master_Receive(&hi2c1, devAddr, &recData[1],2,10);
- 1450              		.loc 1 206 9 discriminator 1 view .LVU350
- 1451 008a 424B     		ldr	r3, .L76+16
- 1452 008c 1870     		strb	r0, [r3]
+ 1458              		.loc 1 206 9 discriminator 1 view .LVU352
+ 1459 008a 424B     		ldr	r3, .L76+16
+ 1460 008c 1870     		strb	r0, [r3]
  207:Src/main.c    **** 	HAL_Delay(100);
- 1453              		.loc 1 207 2 is_stmt 1 view .LVU351
+ 1461              		.loc 1 207 2 is_stmt 1 view .LVU353
  207:Src/main.c    **** 	HAL_Delay(100);
- 1454              		.loc 1 207 12 is_stmt 0 view .LVU352
- 1455 008e 0096     		str	r6, [sp]
- 1456 0090 0223     		movs	r3, #2
- 1457 0092 5246     		mov	r2, r10
- 1458 0094 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
- 1459 0098 3846     		mov	r0, r7
- 1460 009a FFF7FEFF 		bl	HAL_I2C_Master_Receive
- 1461              	.LVL84:
+ 1462              		.loc 1 207 12 is_stmt 0 view .LVU354
+ 1463 008e 0096     		str	r6, [sp]
+ 1464 0090 0223     		movs	r3, #2
+ 1465 0092 5246     		mov	r2, r10
+ 1466 0094 98F80010 		ldrb	r1, [r8]	@ zero_extendqisi2
+ 1467 0098 3846     		mov	r0, r7
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 41
+
+
+ 1468 009a FFF7FEFF 		bl	HAL_I2C_Master_Receive
+ 1469              	.LVL86:
  207:Src/main.c    **** 	HAL_Delay(100);
- 1462              		.loc 1 207 10 discriminator 1 view .LVU353
- 1463 009e A9F80000 		strh	r0, [r9]	@ movhi
+ 1470              		.loc 1 207 10 discriminator 1 view .LVU355
+ 1471 009e A9F80000 		strh	r0, [r9]	@ movhi
  208:Src/main.c    **** 	
- 1464              		.loc 1 208 2 is_stmt 1 view .LVU354
- 1465 00a2 6420     		movs	r0, #100
- 1466 00a4 FFF7FEFF 		bl	HAL_Delay
- 1467              	.LVL85:
+ 1472              		.loc 1 208 2 is_stmt 1 view .LVU356
+ 1473 00a2 6420     		movs	r0, #100
+ 1474 00a4 FFF7FEFF 		bl	HAL_Delay
+ 1475              	.LVL87:
  214:Src/main.c    ****   spiData[0] = 0x28;   //00101000
- 1468              		.loc 1 214 3 view .LVU355
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 41
-
-
+ 1476              		.loc 1 214 3 view .LVU357
  214:Src/main.c    ****   spiData[0] = 0x28;   //00101000
- 1469              		.loc 1 214 7 is_stmt 0 view .LVU356
- 1470 00a8 DFF8F4A0 		ldr	r10, .L76+28
- 1471 00ac 0127     		movs	r7, #1
- 1472 00ae AAF80070 		strh	r7, [r10]	@ movhi
+ 1477              		.loc 1 214 7 is_stmt 0 view .LVU358
+ 1478 00a8 DFF8F4A0 		ldr	r10, .L76+28
+ 1479 00ac 0127     		movs	r7, #1
+ 1480 00ae AAF80070 		strh	r7, [r10]	@ movhi
  215:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
- 1473              		.loc 1 215 3 is_stmt 1 view .LVU357
+ 1481              		.loc 1 215 3 is_stmt 1 view .LVU359
  215:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
- 1474              		.loc 1 215 14 is_stmt 0 view .LVU358
- 1475 00b2 394C     		ldr	r4, .L76+20
- 1476 00b4 2823     		movs	r3, #40
- 1477 00b6 2370     		strb	r3, [r4]
+ 1482              		.loc 1 215 14 is_stmt 0 view .LVU360
+ 1483 00b2 394C     		ldr	r4, .L76+20
+ 1484 00b4 2823     		movs	r3, #40
+ 1485 00b6 2370     		strb	r3, [r4]
  216:Src/main.c    ****   spiData[2] = (out & 0x00FF);
- 1478              		.loc 1 216 3 is_stmt 1 view .LVU359
+ 1486              		.loc 1 216 3 is_stmt 1 view .LVU361
  216:Src/main.c    ****   spiData[2] = (out & 0x00FF);
- 1479              		.loc 1 216 14 is_stmt 0 view .LVU360
- 1480 00b8 6570     		strb	r5, [r4, #1]
+ 1487              		.loc 1 216 14 is_stmt 0 view .LVU362
+ 1488 00b8 6570     		strb	r5, [r4, #1]
  217:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET); 
- 1481              		.loc 1 217 3 is_stmt 1 view .LVU361
+ 1489              		.loc 1 217 3 is_stmt 1 view .LVU363
  217:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET); 
- 1482              		.loc 1 217 14 is_stmt 0 view .LVU362
- 1483 00ba A770     		strb	r7, [r4, #2]
+ 1490              		.loc 1 217 14 is_stmt 0 view .LVU364
+ 1491 00ba A770     		strb	r7, [r4, #2]
  218:Src/main.c    ****   HAL_SPI_Transmit(&hspi1, spiData, 3, 10);
- 1484              		.loc 1 218 3 is_stmt 1 view .LVU363
- 1485 00bc DFF8DC80 		ldr	r8, .L76+24
- 1486 00c0 2A46     		mov	r2, r5
- 1487 00c2 8021     		movs	r1, #128
- 1488 00c4 4046     		mov	r0, r8
- 1489 00c6 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1490              	.LVL86:
+ 1492              		.loc 1 218 3 is_stmt 1 view .LVU365
+ 1493 00bc DFF8DC80 		ldr	r8, .L76+24
+ 1494 00c0 2A46     		mov	r2, r5
+ 1495 00c2 8021     		movs	r1, #128
+ 1496 00c4 4046     		mov	r0, r8
+ 1497 00c6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1498              	.LVL88:
  219:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
- 1491              		.loc 1 219 3 view .LVU364
- 1492 00ca DFF8D890 		ldr	r9, .L76+32
- 1493 00ce 3346     		mov	r3, r6
- 1494 00d0 0322     		movs	r2, #3
- 1495 00d2 2146     		mov	r1, r4
- 1496 00d4 4846     		mov	r0, r9
- 1497 00d6 FFF7FEFF 		bl	HAL_SPI_Transmit
- 1498              	.LVL87:
+ 1499              		.loc 1 219 3 view .LVU366
+ 1500 00ca DFF8D890 		ldr	r9, .L76+32
+ 1501 00ce 3346     		mov	r3, r6
+ 1502 00d0 0322     		movs	r2, #3
+ 1503 00d2 2146     		mov	r1, r4
+ 1504 00d4 4846     		mov	r0, r9
+ 1505 00d6 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 1506              	.LVL89:
  220:Src/main.c    **** 
- 1499              		.loc 1 220 3 view .LVU365
- 1500 00da 3A46     		mov	r2, r7
- 1501 00dc 8021     		movs	r1, #128
- 1502 00de 4046     		mov	r0, r8
- 1503 00e0 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1504              	.LVL88:
- 223:Src/main.c    ****   spiData[0] = 0x38;   //00111000 = 0x38
- 1505              		.loc 1 223 3 view .LVU366
- 223:Src/main.c    ****   spiData[0] = 0x38;   //00111000 = 0x38
- 1506              		.loc 1 223 7 is_stmt 0 view .LVU367
- 1507 00e4 AAF80070 		strh	r7, [r10]	@ movhi
- 224:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
- 1508              		.loc 1 224 3 is_stmt 1 view .LVU368
- 224:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
- 1509              		.loc 1 224 14 is_stmt 0 view .LVU369
- 1510 00e8 3823     		movs	r3, #56
- 1511 00ea 2370     		strb	r3, [r4]
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 42
+ 1507              		.loc 1 220 3 view .LVU367
+ 1508 00da 3A46     		mov	r2, r7
+ 1509 00dc 8021     		movs	r1, #128
+ 1510 00de 4046     		mov	r0, r8
+ 1511 00e0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 42
 
 
+ 1512              	.LVL90:
+ 223:Src/main.c    ****   spiData[0] = 0x38;   //00111000 = 0x38
+ 1513              		.loc 1 223 3 view .LVU368
+ 223:Src/main.c    ****   spiData[0] = 0x38;   //00111000 = 0x38
+ 1514              		.loc 1 223 7 is_stmt 0 view .LVU369
+ 1515 00e4 AAF80070 		strh	r7, [r10]	@ movhi
+ 224:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
+ 1516              		.loc 1 224 3 is_stmt 1 view .LVU370
+ 224:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
+ 1517              		.loc 1 224 14 is_stmt 0 view .LVU371
+ 1518 00e8 3823     		movs	r3, #56
+ 1519 00ea 2370     		strb	r3, [r4]
  225:Src/main.c    ****   spiData[2] = (out & 0x00FF);
- 1512              		.loc 1 225 3 is_stmt 1 view .LVU370
+ 1520              		.loc 1 225 3 is_stmt 1 view .LVU372
  225:Src/main.c    ****   spiData[2] = (out & 0x00FF);
- 1513              		.loc 1 225 14 is_stmt 0 view .LVU371
- 1514 00ec 6570     		strb	r5, [r4, #1]
+ 1521              		.loc 1 225 14 is_stmt 0 view .LVU373
+ 1522 00ec 6570     		strb	r5, [r4, #1]
  226:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
- 1515              		.loc 1 226 3 is_stmt 1 view .LVU372
+ 1523              		.loc 1 226 3 is_stmt 1 view .LVU374
  226:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
- 1516              		.loc 1 226 14 is_stmt 0 view .LVU373
- 1517 00ee A770     		strb	r7, [r4, #2]
+ 1524              		.loc 1 226 14 is_stmt 0 view .LVU375
+ 1525 00ee A770     		strb	r7, [r4, #2]
  227:Src/main.c    ****   if(!HAL_SPI_Transmit(&hspi1, spiData, 3, 10))
- 1518              		.loc 1 227 3 is_stmt 1 view .LVU374
- 1519 00f0 2A46     		mov	r2, r5
- 1520 00f2 8021     		movs	r1, #128
- 1521 00f4 4046     		mov	r0, r8
- 1522 00f6 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1523              	.LVL89:
+ 1526              		.loc 1 227 3 is_stmt 1 view .LVU376
+ 1527 00f0 2A46     		mov	r2, r5
+ 1528 00f2 8021     		movs	r1, #128
+ 1529 00f4 4046     		mov	r0, r8
+ 1530 00f6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1531              	.LVL91:
  228:Src/main.c    ****     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
- 1524              		.loc 1 228 3 view .LVU375
+ 1532              		.loc 1 228 3 view .LVU377
  228:Src/main.c    ****     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
- 1525              		.loc 1 228 7 is_stmt 0 view .LVU376
- 1526 00fa 3346     		mov	r3, r6
- 1527 00fc 0322     		movs	r2, #3
- 1528 00fe 2146     		mov	r1, r4
- 1529 0100 4846     		mov	r0, r9
- 1530 0102 FFF7FEFF 		bl	HAL_SPI_Transmit
- 1531              	.LVL90:
+ 1533              		.loc 1 228 7 is_stmt 0 view .LVU378
+ 1534 00fa 3346     		mov	r3, r6
+ 1535 00fc 0322     		movs	r2, #3
+ 1536 00fe 2146     		mov	r1, r4
+ 1537 0100 4846     		mov	r0, r9
+ 1538 0102 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 1539              	.LVL92:
  228:Src/main.c    ****     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
- 1532              		.loc 1 228 5 discriminator 1 view .LVU377
- 1533 0106 0028     		cmp	r0, #0
- 1534 0108 37D0     		beq	.L75
- 1535              	.L72:
+ 1540              		.loc 1 228 5 discriminator 1 view .LVU379
+ 1541 0106 0028     		cmp	r0, #0
+ 1542 0108 37D0     		beq	.L75
+ 1543              	.L72:
  230:Src/main.c    ****   //HAL_Delay(1);
- 1536              		.loc 1 230 3 is_stmt 1 view .LVU378
- 1537 010a 244E     		ldr	r6, .L76+24
- 1538 010c 0122     		movs	r2, #1
- 1539 010e 8021     		movs	r1, #128
- 1540 0110 3046     		mov	r0, r6
- 1541 0112 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1542              	.LVL91:
+ 1544              		.loc 1 230 3 is_stmt 1 view .LVU380
+ 1545 010a 244E     		ldr	r6, .L76+24
+ 1546 010c 0122     		movs	r2, #1
+ 1547 010e 8021     		movs	r1, #128
+ 1548 0110 3046     		mov	r0, r6
+ 1549 0112 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1550              	.LVL93:
  234:Src/main.c    ****   out = 0x000C;
- 1543              		.loc 1 234 3 view .LVU379
- 1544 0116 0A20     		movs	r0, #10
- 1545 0118 FFF7FEFF 		bl	HAL_Delay
- 1546              	.LVL92:
- 235:Src/main.c    ****   spiData[0] = 0x30;   //00110000 = 0x30
- 1547              		.loc 1 235 3 view .LVU380
- 235:Src/main.c    ****   spiData[0] = 0x30;   //00110000 = 0x30
- 1548              		.loc 1 235 7 is_stmt 0 view .LVU381
- 1549 011c 0C23     		movs	r3, #12
- 1550 011e 204A     		ldr	r2, .L76+28
- 1551 0120 1380     		strh	r3, [r2]	@ movhi
- 236:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
- 1552              		.loc 1 236 3 is_stmt 1 view .LVU382
- 236:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
- 1553              		.loc 1 236 14 is_stmt 0 view .LVU383
- 1554 0122 1D4D     		ldr	r5, .L76+20
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 43
+ 1551              		.loc 1 234 3 view .LVU381
+ 1552 0116 0A20     		movs	r0, #10
+ 1553 0118 FFF7FEFF 		bl	HAL_Delay
+ 1554              	.LVL94:
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 43
 
 
- 1555 0124 3022     		movs	r2, #48
- 1556 0126 2A70     		strb	r2, [r5]
+ 235:Src/main.c    ****   spiData[0] = 0x30;   //00110000 = 0x30
+ 1555              		.loc 1 235 3 view .LVU382
+ 235:Src/main.c    ****   spiData[0] = 0x30;   //00110000 = 0x30
+ 1556              		.loc 1 235 7 is_stmt 0 view .LVU383
+ 1557 011c 0C23     		movs	r3, #12
+ 1558 011e 204A     		ldr	r2, .L76+28
+ 1559 0120 1380     		strh	r3, [r2]	@ movhi
+ 236:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
+ 1560              		.loc 1 236 3 is_stmt 1 view .LVU384
+ 236:Src/main.c    ****   spiData[1] = (out & 0xFF00) >> 8;
+ 1561              		.loc 1 236 14 is_stmt 0 view .LVU385
+ 1562 0122 1D4D     		ldr	r5, .L76+20
+ 1563 0124 3022     		movs	r2, #48
+ 1564 0126 2A70     		strb	r2, [r5]
  237:Src/main.c    ****   spiData[2] = (out & 0x00FF);
- 1557              		.loc 1 237 3 is_stmt 1 view .LVU384
+ 1565              		.loc 1 237 3 is_stmt 1 view .LVU386
  237:Src/main.c    ****   spiData[2] = (out & 0x00FF);
- 1558              		.loc 1 237 14 is_stmt 0 view .LVU385
- 1559 0128 0024     		movs	r4, #0
- 1560 012a 6C70     		strb	r4, [r5, #1]
+ 1566              		.loc 1 237 14 is_stmt 0 view .LVU387
+ 1567 0128 0024     		movs	r4, #0
+ 1568 012a 6C70     		strb	r4, [r5, #1]
  238:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
- 1561              		.loc 1 238 3 is_stmt 1 view .LVU386
+ 1569              		.loc 1 238 3 is_stmt 1 view .LVU388
  238:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
- 1562              		.loc 1 238 14 is_stmt 0 view .LVU387
- 1563 012c AB70     		strb	r3, [r5, #2]
+ 1570              		.loc 1 238 14 is_stmt 0 view .LVU389
+ 1571 012c AB70     		strb	r3, [r5, #2]
  239:Src/main.c    ****   HAL_SPI_Transmit(&hspi1, spiData, 3, 10);
- 1564              		.loc 1 239 3 is_stmt 1 view .LVU388
- 1565 012e 2246     		mov	r2, r4
- 1566 0130 8021     		movs	r1, #128
- 1567 0132 3046     		mov	r0, r6
- 1568 0134 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1569              	.LVL93:
+ 1572              		.loc 1 239 3 is_stmt 1 view .LVU390
+ 1573 012e 2246     		mov	r2, r4
+ 1574 0130 8021     		movs	r1, #128
+ 1575 0132 3046     		mov	r0, r6
+ 1576 0134 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1577              	.LVL95:
  240:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
- 1570              		.loc 1 240 3 view .LVU389
- 1571 0138 0A23     		movs	r3, #10
- 1572 013a 0322     		movs	r2, #3
- 1573 013c 2946     		mov	r1, r5
- 1574 013e 1948     		ldr	r0, .L76+32
- 1575 0140 FFF7FEFF 		bl	HAL_SPI_Transmit
- 1576              	.LVL94:
+ 1578              		.loc 1 240 3 view .LVU391
+ 1579 0138 0A23     		movs	r3, #10
+ 1580 013a 0322     		movs	r2, #3
+ 1581 013c 2946     		mov	r1, r5
+ 1582 013e 1948     		ldr	r0, .L76+32
+ 1583 0140 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 1584              	.LVL96:
  241:Src/main.c    ****   /*
- 1577              		.loc 1 241 3 view .LVU390
- 1578 0144 0122     		movs	r2, #1
- 1579 0146 8021     		movs	r1, #128
- 1580 0148 3046     		mov	r0, r6
- 1581 014a FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1582              	.LVL95:
+ 1585              		.loc 1 241 3 view .LVU392
+ 1586 0144 0122     		movs	r2, #1
+ 1587 0146 8021     		movs	r1, #128
+ 1588 0148 3046     		mov	r0, r6
+ 1589 014a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1590              	.LVL97:
  254:Src/main.c    ****   outFine = 4000;
- 1583              		.loc 1 254 3 view .LVU391
+ 1591              		.loc 1 254 3 view .LVU393
  254:Src/main.c    ****   outFine = 4000;
- 1584              		.loc 1 254 13 is_stmt 0 view .LVU392
- 1585 014e 164D     		ldr	r5, .L76+36
- 1586 0150 2C80     		strh	r4, [r5]	@ movhi
+ 1592              		.loc 1 254 13 is_stmt 0 view .LVU394
+ 1593 014e 164D     		ldr	r5, .L76+36
+ 1594 0150 2C80     		strh	r4, [r5]	@ movhi
  255:Src/main.c    ****   SetDACOut(outFine, CHANNEL_B);
- 1587              		.loc 1 255 3 is_stmt 1 view .LVU393
+ 1595              		.loc 1 255 3 is_stmt 1 view .LVU395
  255:Src/main.c    ****   SetDACOut(outFine, CHANNEL_B);
- 1588              		.loc 1 255 11 is_stmt 0 view .LVU394
- 1589 0152 4FF47A60 		mov	r0, #4000
- 1590 0156 154B     		ldr	r3, .L76+40
- 1591 0158 1880     		strh	r0, [r3]	@ movhi
+ 1596              		.loc 1 255 11 is_stmt 0 view .LVU396
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 44
+
+
+ 1597 0152 4FF47A60 		mov	r0, #4000
+ 1598 0156 154B     		ldr	r3, .L76+40
+ 1599 0158 1880     		strh	r0, [r3]	@ movhi
  256:Src/main.c    ****   SetDACOut(outCoarse, CHANNEL_C);
- 1592              		.loc 1 256 3 is_stmt 1 view .LVU395
- 1593 015a 0221     		movs	r1, #2
- 1594 015c FFF7FEFF 		bl	SetDACOut
- 1595              	.LVL96:
+ 1600              		.loc 1 256 3 is_stmt 1 view .LVU397
+ 1601 015a 0221     		movs	r1, #2
+ 1602 015c FFF7FEFF 		bl	SetDACOut
+ 1603              	.LVL98:
  257:Src/main.c    **** 	SetDACOut(0, CHANNEL_D);
- 1596              		.loc 1 257 3 view .LVU396
- 1597 0160 0321     		movs	r1, #3
- 1598 0162 2888     		ldrh	r0, [r5]
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 44
-
-
- 1599 0164 FFF7FEFF 		bl	SetDACOut
- 1600              	.LVL97:
+ 1604              		.loc 1 257 3 view .LVU398
+ 1605 0160 0321     		movs	r1, #3
+ 1606 0162 2888     		ldrh	r0, [r5]
+ 1607 0164 FFF7FEFF 		bl	SetDACOut
+ 1608              	.LVL99:
  258:Src/main.c    **** 
- 1601              		.loc 1 258 2 view .LVU397
- 1602 0168 0421     		movs	r1, #4
- 1603 016a 2046     		mov	r0, r4
- 1604 016c FFF7FEFF 		bl	SetDACOut
- 1605              	.LVL98:
- 1606              	.L73:
+ 1609              		.loc 1 258 2 view .LVU399
+ 1610 0168 0421     		movs	r1, #4
+ 1611 016a 2046     		mov	r0, r4
+ 1612 016c FFF7FEFF 		bl	SetDACOut
+ 1613              	.LVL100:
+ 1614              	.L73:
  264:Src/main.c    ****   {
- 1607              		.loc 1 264 3 view .LVU398
+ 1615              		.loc 1 264 3 view .LVU400
  274:Src/main.c    ****     
- 1608              		.loc 1 274 5 discriminator 1 view .LVU399
- 1609 0170 0F4B     		ldr	r3, .L76+44
- 1610 0172 1868     		ldr	r0, [r3]
- 1611 0174 FFF7FEFF 		bl	PrintTransmitMeasuredVC
- 1612              	.LVL99:
+ 1616              		.loc 1 274 5 discriminator 1 view .LVU401
+ 1617 0170 0F4B     		ldr	r3, .L76+44
+ 1618 0172 1868     		ldr	r0, [r3]
+ 1619 0174 FFF7FEFF 		bl	PrintTransmitMeasuredVC
+ 1620              	.LVL101:
  264:Src/main.c    ****   {
- 1613              		.loc 1 264 9 view .LVU400
- 1614 0178 FAE7     		b	.L73
- 1615              	.L75:
+ 1621              		.loc 1 264 9 view .LVU402
+ 1622 0178 FAE7     		b	.L73
+ 1623              	.L75:
  229:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);
- 1616              		.loc 1 229 5 view .LVU401
- 1617 017a 2021     		movs	r1, #32
- 1618 017c 0D48     		ldr	r0, .L76+48
- 1619 017e FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 1620              	.LVL100:
- 1621 0182 C2E7     		b	.L72
- 1622              	.L77:
- 1623              		.align	2
- 1624              	.L76:
- 1625 0184 00000000 		.word	configWord
- 1626 0188 00000000 		.word	I2C_Data
- 1627 018c 00000000 		.word	hi2c1
- 1628 0190 00000000 		.word	calibWord
- 1629 0194 00000000 		.word	sendOK
- 1630 0198 00000000 		.word	spiData
- 1631 019c 00080240 		.word	1073874944
- 1632 01a0 00000000 		.word	out
- 1633 01a4 00000000 		.word	hspi1
- 1634 01a8 00000000 		.word	outCoarse
- 1635 01ac 00000000 		.word	outFine
- 1636 01b0 00000000 		.word	g_delay
- 1637 01b4 00000240 		.word	1073872896
- 1638 01b8 00000000 		.word	devAddr
- 1639 01bc 01000000 		.word	recData+1
- 1640 01c0 00000000 		.word	receive
- 1641              		.cfi_endproc
- 1642              	.LFE126:
- 1644              		.section	.text.Error_Handler,"ax",%progbits
- 1645              		.align	1
- 1646              		.global	Error_Handler
- 1647              		.syntax unified
- 1648              		.thumb
- 1649              		.thumb_func
- 1651              	Error_Handler:
- 1652              	.LFB141:
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 45
+ 1624              		.loc 1 229 5 view .LVU403
+ 1625 017a 2021     		movs	r1, #32
+ 1626 017c 0D48     		ldr	r0, .L76+48
+ 1627 017e FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 1628              	.LVL102:
+ 1629 0182 C2E7     		b	.L72
+ 1630              	.L77:
+ 1631              		.align	2
+ 1632              	.L76:
+ 1633 0184 00000000 		.word	configWord
+ 1634 0188 00000000 		.word	I2C_Data
+ 1635 018c 00000000 		.word	hi2c1
+ 1636 0190 00000000 		.word	calibWord
+ 1637 0194 00000000 		.word	sendOK
+ 1638 0198 00000000 		.word	spiData
+ 1639 019c 00080240 		.word	1073874944
+ 1640 01a0 00000000 		.word	out
+ 1641 01a4 00000000 		.word	hspi1
+ 1642 01a8 00000000 		.word	outCoarse
+ 1643 01ac 00000000 		.word	outFine
+ 1644 01b0 00000000 		.word	g_delay
+ 1645 01b4 00000240 		.word	1073872896
+ 1646 01b8 00000000 		.word	devAddr
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 45
 
 
- 624:Src/main.c    **** 
- 625:Src/main.c    **** /* USER CODE END 4 */
+ 1647 01bc 01000000 		.word	recData+1
+ 1648 01c0 00000000 		.word	receive
+ 1649              		.cfi_endproc
+ 1650              	.LFE126:
+ 1652              		.section	.text.Error_Handler,"ax",%progbits
+ 1653              		.align	1
+ 1654              		.global	Error_Handler
+ 1655              		.syntax unified
+ 1656              		.thumb
+ 1657              		.thumb_func
+ 1659              	Error_Handler:
+ 1660              	.LFB141:
  626:Src/main.c    **** 
- 627:Src/main.c    **** /**
- 628:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
- 629:Src/main.c    ****   * @retval None
- 630:Src/main.c    ****   */
- 631:Src/main.c    **** void Error_Handler(void)
- 632:Src/main.c    **** {
- 1653              		.loc 1 632 1 view -0
- 1654              		.cfi_startproc
- 1655              		@ args = 0, pretend = 0, frame = 0
- 1656              		@ frame_needed = 0, uses_anonymous_args = 0
- 1657              		@ link register save eliminated.
- 633:Src/main.c    ****   /* USER CODE BEGIN Error_Handler_Debug */
- 634:Src/main.c    ****   /* User can add his own implementation to report the HAL error return state */
- 635:Src/main.c    **** 
- 636:Src/main.c    ****   /* USER CODE END Error_Handler_Debug */
- 637:Src/main.c    **** }
- 1658              		.loc 1 637 1 view .LVU403
- 1659 0000 7047     		bx	lr
- 1660              		.cfi_endproc
- 1661              	.LFE141:
- 1663              		.global	data2
- 1664              		.section	.bss.data2,"aw",%nobits
- 1665              		.align	2
- 1668              	data2:
- 1669 0000 00000000 		.space	40
- 1669      00000000 
- 1669      00000000 
- 1669      00000000 
- 1669      00000000 
- 1670              		.global	data
- 1671              		.section	.bss.data,"aw",%nobits
- 1672              		.align	2
- 1675              	data:
- 1676 0000 00000000 		.space	7
- 1676      000000
- 1677              		.global	g_delay
- 1678              		.section	.data.g_delay,"aw"
- 1679              		.align	2
- 1682              	g_delay:
- 1683 0000 2C010000 		.word	300
- 1684              		.global	g_counter
- 1685              		.section	.bss.g_counter,"aw",%nobits
- 1686              		.align	1
- 1689              	g_counter:
- 1690 0000 0000     		.space	2
- 1691              		.global	current
- 1692              		.section	.bss.current,"aw",%nobits
- 1693              		.align	2
- 1696              	current:
- 1697 0000 00000000 		.space	4
- 1698              		.global	voltage
- 1699              		.section	.bss.voltage,"aw",%nobits
- 1700              		.align	2
- 1703              	voltage:
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 46
+ 627:Src/main.c    **** /* USER CODE END 4 */
+ 628:Src/main.c    **** 
+ 629:Src/main.c    **** /**
+ 630:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+ 631:Src/main.c    ****   * @retval None
+ 632:Src/main.c    ****   */
+ 633:Src/main.c    **** void Error_Handler(void)
+ 634:Src/main.c    **** {
+ 1661              		.loc 1 634 1 view -0
+ 1662              		.cfi_startproc
+ 1663              		@ args = 0, pretend = 0, frame = 0
+ 1664              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1665              		@ link register save eliminated.
+ 635:Src/main.c    ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 636:Src/main.c    ****   /* User can add his own implementation to report the HAL error return state */
+ 637:Src/main.c    **** 
+ 638:Src/main.c    ****   /* USER CODE END Error_Handler_Debug */
+ 639:Src/main.c    **** }
+ 1666              		.loc 1 639 1 view .LVU405
+ 1667 0000 7047     		bx	lr
+ 1668              		.cfi_endproc
+ 1669              	.LFE141:
+ 1671              		.global	data2
+ 1672              		.section	.bss.data2,"aw",%nobits
+ 1673              		.align	2
+ 1676              	data2:
+ 1677 0000 00000000 		.space	40
+ 1677      00000000 
+ 1677      00000000 
+ 1677      00000000 
+ 1677      00000000 
+ 1678              		.global	g_delay
+ 1679              		.section	.data.g_delay,"aw"
+ 1680              		.align	2
+ 1683              	g_delay:
+ 1684 0000 2C010000 		.word	300
+ 1685              		.global	g_counter
+ 1686              		.section	.bss.g_counter,"aw",%nobits
+ 1687              		.align	1
+ 1690              	g_counter:
+ 1691 0000 0000     		.space	2
+ 1692              		.global	current
+ 1693              		.section	.bss.current,"aw",%nobits
+ 1694              		.align	2
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 46
 
 
- 1704 0000 00000000 		.space	4
- 1705              		.global	sendOK
- 1706              		.section	.bss.sendOK,"aw",%nobits
- 1709              	sendOK:
- 1710 0000 00       		.space	1
- 1711              		.global	receive
- 1712              		.section	.bss.receive,"aw",%nobits
- 1713              		.align	1
- 1716              	receive:
- 1717 0000 0000     		.space	2
- 1718              		.global	calibWord
- 1719              		.section	.bss.calibWord,"aw",%nobits
- 1720              		.align	1
- 1723              	calibWord:
- 1724 0000 0000     		.space	2
- 1725              		.global	configWord
- 1726              		.section	.bss.configWord,"aw",%nobits
- 1727              		.align	1
- 1730              	configWord:
- 1731 0000 0000     		.space	2
- 1732              		.global	devAddr
- 1733              		.section	.data.devAddr,"aw"
- 1736              	devAddr:
- 1737 0000 80       		.byte	-128
- 1738              		.global	recData
- 1739              		.section	.bss.recData,"aw",%nobits
- 1740              		.align	2
- 1743              	recData:
- 1744 0000 000000   		.space	3
- 1745              		.global	I2C_Data
- 1746              		.section	.bss.I2C_Data,"aw",%nobits
- 1747              		.align	2
- 1750              	I2C_Data:
- 1751 0000 000000   		.space	3
- 1752              		.global	approxCoefficient
- 1753              		.section	.data.approxCoefficient,"aw"
- 1754              		.align	2
- 1757              	approxCoefficient:
- 1758 0000 CD4CD443 		.word	1137986765
- 1759              		.global	b2
- 1760              		.section	.data.b2,"aw"
- 1761              		.align	2
- 1764              	b2:
- 1765 0000 1E5252BE 		.word	-1101901282
- 1766              		.global	k2
- 1767              		.section	.data.k2,"aw"
- 1768              		.align	2
- 1771              	k2:
- 1772 0000 D1B7F839 		.word	972601297
- 1773              		.global	outCoarse
- 1774              		.section	.data.outCoarse,"aw"
- 1775              		.align	1
- 1778              	outCoarse:
- 1779 0000 0100     		.short	1
- 1780              		.global	out
- 1781              		.section	.bss.out,"aw",%nobits
- 1782              		.align	1
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 47
+ 1697              	current:
+ 1698 0000 00000000 		.space	4
+ 1699              		.global	voltage
+ 1700              		.section	.bss.voltage,"aw",%nobits
+ 1701              		.align	2
+ 1704              	voltage:
+ 1705 0000 00000000 		.space	4
+ 1706              		.global	sendOK
+ 1707              		.section	.bss.sendOK,"aw",%nobits
+ 1710              	sendOK:
+ 1711 0000 00       		.space	1
+ 1712              		.global	receive
+ 1713              		.section	.bss.receive,"aw",%nobits
+ 1714              		.align	1
+ 1717              	receive:
+ 1718 0000 0000     		.space	2
+ 1719              		.global	calibWord
+ 1720              		.section	.bss.calibWord,"aw",%nobits
+ 1721              		.align	1
+ 1724              	calibWord:
+ 1725 0000 0000     		.space	2
+ 1726              		.global	configWord
+ 1727              		.section	.bss.configWord,"aw",%nobits
+ 1728              		.align	1
+ 1731              	configWord:
+ 1732 0000 0000     		.space	2
+ 1733              		.global	devAddr
+ 1734              		.section	.data.devAddr,"aw"
+ 1737              	devAddr:
+ 1738 0000 80       		.byte	-128
+ 1739              		.global	recData
+ 1740              		.section	.bss.recData,"aw",%nobits
+ 1741              		.align	2
+ 1744              	recData:
+ 1745 0000 000000   		.space	3
+ 1746              		.global	I2C_Data
+ 1747              		.section	.bss.I2C_Data,"aw",%nobits
+ 1748              		.align	2
+ 1751              	I2C_Data:
+ 1752 0000 000000   		.space	3
+ 1753              		.global	approxCoefficient
+ 1754              		.section	.data.approxCoefficient,"aw"
+ 1755              		.align	2
+ 1758              	approxCoefficient:
+ 1759 0000 CD4CD443 		.word	1137986765
+ 1760              		.global	b2
+ 1761              		.section	.data.b2,"aw"
+ 1762              		.align	2
+ 1765              	b2:
+ 1766 0000 1E5252BE 		.word	-1101901282
+ 1767              		.global	k2
+ 1768              		.section	.data.k2,"aw"
+ 1769              		.align	2
+ 1772              	k2:
+ 1773 0000 D1B7F839 		.word	972601297
+ 1774              		.global	outCoarse
+ 1775              		.section	.data.outCoarse,"aw"
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 47
 
 
- 1785              	out:
- 1786 0000 0000     		.space	2
- 1787              		.global	outFine
- 1788              		.section	.bss.outFine,"aw",%nobits
- 1789              		.align	1
- 1792              	outFine:
- 1793 0000 0000     		.space	2
- 1794              		.global	spiData
- 1795              		.section	.bss.spiData,"aw",%nobits
- 1796              		.align	2
- 1799              	spiData:
- 1800 0000 000000   		.space	3
- 1801              		.global	huart2
- 1802              		.section	.bss.huart2,"aw",%nobits
- 1803              		.align	2
- 1806              	huart2:
- 1807 0000 00000000 		.space	64
- 1807      00000000 
- 1807      00000000 
- 1807      00000000 
- 1807      00000000 
- 1808              		.global	hspi1
- 1809              		.section	.bss.hspi1,"aw",%nobits
- 1810              		.align	2
- 1813              	hspi1:
- 1814 0000 00000000 		.space	88
- 1814      00000000 
- 1814      00000000 
- 1814      00000000 
- 1814      00000000 
- 1815              		.global	hi2c1
- 1816              		.section	.bss.hi2c1,"aw",%nobits
- 1817              		.align	2
- 1820              	hi2c1:
- 1821 0000 00000000 		.space	84
- 1821      00000000 
- 1821      00000000 
- 1821      00000000 
- 1821      00000000 
- 1822              		.text
- 1823              	.Letext0:
- 1824              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
- 1825              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
- 1826              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
- 1827              		.file 5 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/lib/gcc/arm-none-eabi/13
- 1828              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 1829              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
- 1830              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
- 1831              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
- 1832              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 1833              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
- 1834              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
- 1835              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
- 1836              		.file 14 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
- 1837              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
- 1838              		.file 16 "<built-in>"
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 48
+ 1776              		.align	1
+ 1779              	outCoarse:
+ 1780 0000 0100     		.short	1
+ 1781              		.global	out
+ 1782              		.section	.bss.out,"aw",%nobits
+ 1783              		.align	1
+ 1786              	out:
+ 1787 0000 0000     		.space	2
+ 1788              		.global	outFine
+ 1789              		.section	.bss.outFine,"aw",%nobits
+ 1790              		.align	1
+ 1793              	outFine:
+ 1794 0000 0000     		.space	2
+ 1795              		.global	spiData
+ 1796              		.section	.bss.spiData,"aw",%nobits
+ 1797              		.align	2
+ 1800              	spiData:
+ 1801 0000 000000   		.space	3
+ 1802              		.global	huart2
+ 1803              		.section	.bss.huart2,"aw",%nobits
+ 1804              		.align	2
+ 1807              	huart2:
+ 1808 0000 00000000 		.space	64
+ 1808      00000000 
+ 1808      00000000 
+ 1808      00000000 
+ 1808      00000000 
+ 1809              		.global	hspi1
+ 1810              		.section	.bss.hspi1,"aw",%nobits
+ 1811              		.align	2
+ 1814              	hspi1:
+ 1815 0000 00000000 		.space	88
+ 1815      00000000 
+ 1815      00000000 
+ 1815      00000000 
+ 1815      00000000 
+ 1816              		.global	hi2c1
+ 1817              		.section	.bss.hi2c1,"aw",%nobits
+ 1818              		.align	2
+ 1821              	hi2c1:
+ 1822 0000 00000000 		.space	84
+ 1822      00000000 
+ 1822      00000000 
+ 1822      00000000 
+ 1822      00000000 
+ 1823              		.text
+ 1824              	.Letext0:
+ 1825              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/ma
+ 1826              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/sy
+ 1827              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 1828              		.file 5 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/lib/gcc/arm-none-eabi/13
+ 1829              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 1830              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+ 1831              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ 1832              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 1833              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 1834              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 48
+
+
+ 1835              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h"
+ 1836              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 1837              		.file 14 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/arm-none-eabi/include/s
+ 1838              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 1839              		.file 16 "<built-in>"
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 49
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:21     .text.MX_GPIO_Init:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:192    .text.MX_GPIO_Init:000000bc $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:200    .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:205    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:255    .text.MX_USART2_UART_Init:00000024 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1806   .bss.huart2:00000000 huart2
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:261    .text.MX_I2C1_Init:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:266    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:319    .text.MX_I2C1_Init:00000028 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1820   .bss.hi2c1:00000000 hi2c1
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:326    .text.MX_SPI1_Init:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:331    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:395    .text.MX_SPI1_Init:00000034 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1813   .bss.hspi1:00000000 hspi1
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:401    .text.SystemClock_Config:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:407    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:544    .text.SystemClock_Config:0000008c $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:550    .text.SetDACOut:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:556    .text.SetDACOut:00000000 SetDACOut
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:640    .text.SetDACOut:00000050 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1799   .bss.spiData:00000000 spiData
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:647    .text.GetShuntVoltageReg:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:653    .text.GetShuntVoltageReg:00000000 GetShuntVoltageReg
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:717    .text.GetShuntVoltageReg:00000044 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1750   .bss.I2C_Data:00000000 I2C_Data
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1736   .data.devAddr:00000000 devAddr
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1709   .bss.sendOK:00000000 sendOK
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1743   .bss.recData:00000000 recData
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1716   .bss.receive:00000000 receive
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:727    .text.GetBusVoltageReg:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:733    .text.GetBusVoltageReg:00000000 GetBusVoltageReg
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:799    .text.GetBusVoltageReg:00000050 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:809    .text.GetCurrentReg:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:815    .text.GetCurrentReg:00000000 GetCurrentReg
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:880    .text.GetCurrentReg:00000044 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:893    .text.GetVoltage:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:899    .text.GetVoltage:00000000 GetVoltage
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:959    .text.GetVoltage:0000003c $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:964    .rodata.PrintTransmitApproximatedVC.str1.4:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:969    .text.PrintTransmitApproximatedVC:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:975    .text.PrintTransmitApproximatedVC:00000000 PrintTransmitApproximatedVC
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1080   .text.PrintTransmitApproximatedVC:000000a4 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1703   .bss.voltage:00000000 voltage
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1778   .data.outCoarse:00000000 outCoarse
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1757   .data.approxCoefficient:00000000 approxCoefficient
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1792   .bss.outFine:00000000 outFine
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1771   .data.k2:00000000 k2
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1764   .data.b2:00000000 b2
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1696   .bss.current:00000000 current
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1668   .bss.data2:00000000 data2
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1689   .bss.g_counter:00000000 g_counter
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1096   .text.GetShuntVoltage:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1102   .text.GetShuntVoltage:00000000 GetShuntVoltage
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1162   .text.GetShuntVoltage:00000040 $d
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 49
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:21     .text.MX_GPIO_Init:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:192    .text.MX_GPIO_Init:000000bc $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:200    .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:205    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:255    .text.MX_USART2_UART_Init:00000024 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1807   .bss.huart2:00000000 huart2
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:261    .text.MX_I2C1_Init:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:266    .text.MX_I2C1_Init:00000000 MX_I2C1_Init
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:319    .text.MX_I2C1_Init:00000028 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1821   .bss.hi2c1:00000000 hi2c1
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:326    .text.MX_SPI1_Init:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:331    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:395    .text.MX_SPI1_Init:00000034 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1814   .bss.hspi1:00000000 hspi1
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:401    .text.SystemClock_Config:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:407    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:544    .text.SystemClock_Config:0000008c $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:550    .text.SetDACOut:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:556    .text.SetDACOut:00000000 SetDACOut
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:640    .text.SetDACOut:00000050 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1800   .bss.spiData:00000000 spiData
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:647    .text.GetShuntVoltageReg:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:653    .text.GetShuntVoltageReg:00000000 GetShuntVoltageReg
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:717    .text.GetShuntVoltageReg:00000044 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1751   .bss.I2C_Data:00000000 I2C_Data
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1737   .data.devAddr:00000000 devAddr
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1710   .bss.sendOK:00000000 sendOK
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1744   .bss.recData:00000000 recData
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1717   .bss.receive:00000000 receive
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:727    .text.GetBusVoltageReg:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:733    .text.GetBusVoltageReg:00000000 GetBusVoltageReg
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:799    .text.GetBusVoltageReg:00000050 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:809    .text.GetCurrentReg:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:815    .text.GetCurrentReg:00000000 GetCurrentReg
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:880    .text.GetCurrentReg:00000044 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:893    .text.GetVoltage:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:899    .text.GetVoltage:00000000 GetVoltage
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:959    .text.GetVoltage:0000003c $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:964    .rodata.PrintTransmitApproximatedVC.str1.4:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:969    .text.PrintTransmitApproximatedVC:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:975    .text.PrintTransmitApproximatedVC:00000000 PrintTransmitApproximatedVC
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1084   .text.PrintTransmitApproximatedVC:000000a8 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1704   .bss.voltage:00000000 voltage
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1779   .data.outCoarse:00000000 outCoarse
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1758   .data.approxCoefficient:00000000 approxCoefficient
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1793   .bss.outFine:00000000 outFine
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1772   .data.k2:00000000 k2
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1765   .data.b2:00000000 b2
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1697   .bss.current:00000000 current
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1676   .bss.data2:00000000 data2
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1690   .bss.g_counter:00000000 g_counter
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1100   .text.GetShuntVoltage:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1106   .text.GetShuntVoltage:00000000 GetShuntVoltage
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1166   .text.GetShuntVoltage:00000040 $d
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 50
 
 
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1168   .text.GetCurrent:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1174   .text.GetCurrent:00000000 GetCurrent
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1234   .text.GetCurrent:00000040 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1240   .text.PrintTransmitMeasuredVC:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1246   .text.PrintTransmitMeasuredVC:00000000 PrintTransmitMeasuredVC
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1330   .text.PrintTransmitMeasuredVC:00000070 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1343   .text.main:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1349   .text.main:00000000 main
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1625   .text.main:00000184 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1730   .bss.configWord:00000000 configWord
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1723   .bss.calibWord:00000000 calibWord
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1785   .bss.out:00000000 out
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1682   .data.g_delay:00000000 g_delay
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1645   .text.Error_Handler:00000000 $t
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1651   .text.Error_Handler:00000000 Error_Handler
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1665   .bss.data2:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1675   .bss.data:00000000 data
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1672   .bss.data:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1679   .data.g_delay:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1686   .bss.g_counter:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1693   .bss.current:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1700   .bss.voltage:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1710   .bss.sendOK:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1713   .bss.receive:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1720   .bss.calibWord:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1727   .bss.configWord:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1740   .bss.recData:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1747   .bss.I2C_Data:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1754   .data.approxCoefficient:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1761   .data.b2:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1768   .data.k2:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1775   .data.outCoarse:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1782   .bss.out:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1789   .bss.outFine:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1796   .bss.spiData:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1803   .bss.huart2:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1810   .bss.hspi1:00000000 $d
-C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s:1817   .bss.hi2c1:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1172   .text.GetCurrent:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1178   .text.GetCurrent:00000000 GetCurrent
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1238   .text.GetCurrent:00000040 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1244   .text.PrintTransmitMeasuredVC:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1250   .text.PrintTransmitMeasuredVC:00000000 PrintTransmitMeasuredVC
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1338   .text.PrintTransmitMeasuredVC:00000074 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1351   .text.main:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1357   .text.main:00000000 main
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1633   .text.main:00000184 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1731   .bss.configWord:00000000 configWord
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1724   .bss.calibWord:00000000 calibWord
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1786   .bss.out:00000000 out
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1683   .data.g_delay:00000000 g_delay
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1653   .text.Error_Handler:00000000 $t
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1659   .text.Error_Handler:00000000 Error_Handler
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1673   .bss.data2:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1680   .data.g_delay:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1687   .bss.g_counter:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1694   .bss.current:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1701   .bss.voltage:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1711   .bss.sendOK:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1714   .bss.receive:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1721   .bss.calibWord:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1728   .bss.configWord:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1741   .bss.recData:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1748   .bss.I2C_Data:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1755   .data.approxCoefficient:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1762   .data.b2:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1769   .data.k2:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1776   .data.outCoarse:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1783   .bss.out:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1790   .bss.outFine:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1797   .bss.spiData:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1804   .bss.huart2:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1811   .bss.hspi1:00000000 $d
+C:\Users\migel\AppData\Local\Temp\ccewg8FG.s:1818   .bss.hi2c1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
@@ -2937,9 +2944,9 @@ __aeabi_d2f
 __aeabi_f2d
 snprintf
 HAL_UART_Transmit
-ARM GAS  C:\Users\migel\AppData\Local\Temp\ccPmQaBX.s 			page 50
-
-
-HAL_Init
 HAL_Delay
+HAL_Init
+ARM GAS  C:\Users\migel\AppData\Local\Temp\ccewg8FG.s 			page 51
+
+
 HAL_GPIO_TogglePin
